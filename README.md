@@ -14,5 +14,19 @@ As there are different connectors used on the CPC464, CPC664 and CPC6128/Plus co
 - [Keyboard layout design](https://www.keyboard-layout-editor.com)
 - [Switch layout template](http://builder.swillkb.com)
 
+### Proposed BOM
+- 74 x Cherry MX-type key switches in total
+- 63 x 1u
+- 1 x ISO ENTER
+- 1 x 1.5u (TAB)
+- 1 x 1.75u (CAPS LOCK)
+- 2 x 2.5u (COPY & CTRL)
+- 1 x 3u (number pad ENTER)
+- 1 x 7u (SPACE)
+- 1 x SPST power switch
+- 1 x LED & resistor
+- 2 x 10-pin header (for keyboard)
+- 1 x 2-pin header (for power)
+
 ### Status
 25-Jul-2025: work in progress<br>
