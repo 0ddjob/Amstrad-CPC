@@ -1,0 +1,14 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description,Sim.Device,Sim.Type,Sim.Pins
+C1,1,100nF,C_Disc_D3.4mm_W2.1mm_P2.50mm,,,,tht,Unpolarized capacitor,,,
+J1,1,BPX65,PinSocket_1x02_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",,,
+J2,1,JOYSTICK,PinSocket_1x05_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",,,
+J3,1,POWER,PinSocket_1x02_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",,,
+J4,1,LED,PinSocket_1x02_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",,,
+J5,1,SEND,PinSocket_1x02_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",,,
+"Q1, Q2, Q3",3,ZTX300,TO-92_Inline,,,,tht,"Bipolar transistor symbol for simulation only, substrate tied to the emitter",NPN,GUMMELPOON,1=C 2=B 3=E
+R1,1,100KΩ,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,,,tht,Resistor,,,
+"R2, R3, R4",3,1KΩ,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,,,tht,Resistor,,,
+R5,1,180Ω,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,,,tht,Resistor,,,
+"RV1, RV2, RV3",3,100KΩ,Potentiometer_Bourns_3296W_Vertical,,,,tht,Potentiometer,,,
+"U1, U2, U3",3,LM311,DIP-8_W7.62mm,,,,tht,"Voltage Comparator, DIP-8/SOIC-8",,,
+U4,1,74LS125,DIP-14_W7.62mm,,,,tht,Quad buffer 3-State outputs,,,

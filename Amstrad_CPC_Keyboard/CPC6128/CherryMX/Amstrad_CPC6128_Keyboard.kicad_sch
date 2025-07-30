@@ -5210,7 +5210,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CARAT"
+		(property "Value" "^CARAT^"
 			(at 45.72 97.7899 90)
 			(effects
 				(font
@@ -5280,7 +5280,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "COMMA"
+		(property "Value" ",COMMA,"
 			(at 134.62 85.0899 90)
 			(effects
 				(font
@@ -5396,70 +5396,6 @@
 			(project "Amstrad_CPC664_Keyboard"
 				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
 					(reference "SW26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clueless_Engineer:Stabiliser")
-		(at 255.27 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44be1792-db35-4420-ad40-dbe8fe9f2604")
-		(property "Reference" "KB70"
-			(at 256.54 133.3143 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NP_ENTER"
-			(at 256.54 135.8543 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Mounting_Keyboard_Stabilizer:Stabilizer_Cherry_MX_3.00u"
-			(at 255.27 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 255.27 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 255.27 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "Amstrad_CPC6128_Keyboard"
-				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
-					(reference "KB70")
 					(unit 1)
 				)
 			)
@@ -6292,70 +6228,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Clueless_Engineer:Stabiliser")
-		(at 237.49 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "654b807b-f7fa-48aa-8584-8dccdbec01ae")
-		(property "Reference" "KB8"
-			(at 238.76 133.3143 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "CAPS_LOCK"
-			(at 238.76 135.8543 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Mounting_Keyboard_Stabilizer:Stabilizer_Cherry_MX_2.00u"
-			(at 237.49 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 237.49 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 237.49 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
-					(reference "KB8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 74.93 175.26 180)
 		(unit 1)
@@ -6564,70 +6436,6 @@
 	)
 	(symbol
 		(lib_id "Clueless_Engineer:Stabiliser")
-		(at 210.82 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6b6efae0-2c5c-432b-81b2-78ec6dbb1615")
-		(property "Reference" "KB65"
-			(at 212.09 133.3143 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LH_SHIFT"
-			(at 212.09 135.8543 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Mounting_Keyboard_Stabilizer:Stabilizer_Cherry_MX_2.00u"
-			(at 210.82 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 210.82 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
-					(reference "KB65")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clueless_Engineer:Stabiliser")
 		(at 182.88 133.35 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6708,7 +6516,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SEMI_COLON"
+		(property "Value" ";SEMI_COLON;"
 			(at 90.932 101.6 90)
 			(effects
 				(font
@@ -7470,7 +7278,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "COLON"
+		(property "Value" ":COLON:"
 			(at 109.22 97.7899 90)
 			(effects
 				(font
@@ -7819,7 +7627,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DOT"
+		(property "Value" ".DOT."
 			(at 134.62 97.7899 90)
 			(effects
 				(font
@@ -7935,70 +7743,6 @@
 			(project "Amstrad_CPC664_Keyboard"
 				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
 					(reference "SW24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clueless_Engineer:Stabiliser")
-		(at 195.58 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b8ca7050-6fc7-455e-82b3-f08802853f14")
-		(property "Reference" "KB74"
-			(at 196.85 133.3143 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "RH_SHIFT"
-			(at 196.85 135.8543 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Mounting_Keyboard_Stabilizer:Stabilizer_Cherry_MX_2.00u"
-			(at 195.58 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 195.58 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
-					(reference "KB74")
 					(unit 1)
 				)
 			)
@@ -8785,7 +8529,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "@"
+		(property "Value" "@AT@"
 			(at 71.12 97.7899 90)
 			(effects
 				(font
@@ -9412,7 +9156,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MINUS"
+		(property "Value" "-MINUS-"
 			(at 58.42 97.7899 90)
 			(effects
 				(font
@@ -9458,70 +9202,6 @@
 			(project "Amstrad_CPC664_Keyboard"
 				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
 					(reference "SW31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Clueless_Engineer:Stabiliser")
-		(at 224.79 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f5c2ac24-35a7-4394-bd88-4756c51d2f7b")
-		(property "Reference" "KB56"
-			(at 226.06 133.3143 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "ENTER"
-			(at 226.06 135.8543 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "PCM_Mounting_Keyboard_Stabilizer:Stabilizer_Cherry_MX_2.00u"
-			(at 224.79 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 224.79 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project ""
-				(path "/6fea81cf-9c97-49b2-9957-4baf09e957e2"
-					(reference "KB56")
 					(unit 1)
 				)
 			)
