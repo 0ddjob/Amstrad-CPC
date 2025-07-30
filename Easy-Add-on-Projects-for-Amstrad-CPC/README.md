@@ -5,5 +5,5 @@ Hardware projects from the [book](https://archive.org/details/easy-add-on-projec
 Status:<br>
 15-Apr-2025: Initial PCB design completed<br>
 
-![3D view of PCB](/Project02/Images/Project02_3D.png)
+![3D view of PCB](/Easy-Add-on-Projects-for-Amstrad-CPC/Project02/Images/Project02_3D.png)
 
