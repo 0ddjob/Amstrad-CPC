@@ -1,0 +1,195 @@
+(footprint "Switch_Tactile_6mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Switch, Tactile, 6mm")
+	(tags "SWITCH TACTILE 6MM")
+	(property "Reference" "REF*"
+		(at 0 -4.445 0)
+		(layer "F.SilkS")
+		(uuid "d880a0b4-8c3e-4186-b46b-f9f9e3156e5b")
+		(effects
+			(font
+				(size 1.016 1.016)
+				(thickness 0.2032)
+			)
+		)
+	)
+	(property "Value" "VAL*"
+		(at 0 4.445 0)
+		(layer "F.SilkS")
+		(uuid "3dc1786c-fd1f-448a-8b27-3c0bacbb94aa")
+		(effects
+			(font
+				(size 1.016 0.9144)
+				(thickness 0.2032)
+				(italic yes)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4509ba23-4c33-4c26-98b4-3032f745daa0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a6f7d7e7-0c98-4785-9bab-dd58914ab7b0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7bccdfaf-3fbc-4bf2-8763-4296244d7ea5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.99974 2.75082)
+		(end -2.99974 -2.75082)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4f24f984-55ab-4e08-ad54-5f614c3f92fc")
+	)
+	(fp_line
+		(start -2.75082 -2.99974)
+		(end 2.75082 -2.99974)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "09e4455c-1696-4aec-8536-5fa7939d4ca5")
+	)
+	(fp_line
+		(start 2.75082 2.99974)
+		(end -2.75082 2.99974)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f05ea8bf-db5d-44e5-b39a-3685da03e5ab")
+	)
+	(fp_line
+		(start 2.99974 -2.75082)
+		(end 2.99974 2.75082)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bc88fd84-2bc3-4035-810f-7de13587d47d")
+	)
+	(fp_arc
+		(start -2.99974 -2.75082)
+		(mid -2.926833 -2.926833)
+		(end -2.75082 -2.99974)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0187dd0a-af32-4df0-8787-68f761a1fe3f")
+	)
+	(fp_arc
+		(start -2.75082 2.99974)
+		(mid -2.926833 2.926833)
+		(end -2.99974 2.75082)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f07f18c6-44d3-4d44-9301-6c9bdf2ac0dc")
+	)
+	(fp_arc
+		(start 2.75082 -2.99974)
+		(mid 2.926833 -2.926833)
+		(end 2.99974 -2.75082)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a8cfff1a-3a2c-46a5-93a3-acf9193c23fe")
+	)
+	(fp_arc
+		(start 2.99974 2.75082)
+		(mid 2.926833 2.926833)
+		(end 2.75082 2.99974)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b9e682a-66cf-4ec9-bbea-c9cdf003174a")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0 -1.75006)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "8453eb21-a730-40d9-ac63-ea78e57d1e36")
+	)
+	(pad "1" thru_hole circle
+		(at -3.2512 -2.25044)
+		(size 1.39954 1.39954)
+		(drill 1.00076)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "70f70022-8b8d-411f-9aca-47a3019f1e19")
+	)
+	(pad "1" thru_hole circle
+		(at 3.2512 -2.25044)
+		(size 1.39954 1.39954)
+		(drill 1.00076)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "9216ed74-5892-484d-9f56-76c3eca5933c")
+	)
+	(pad "2" thru_hole circle
+		(at -3.2512 2.25044)
+		(size 1.39954 1.39954)
+		(drill 1.00076)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "03ea9093-8410-4736-ad6a-4e0b781b8adf")
+	)
+	(pad "2" thru_hole circle
+		(at 3.2512 2.25044)
+		(size 1.39954 1.39954)
+		(drill 1.00076)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "49cd0805-7816-4d23-babb-34c254489d53")
+	)
+)
