@@ -16,3 +16,8 @@ Keyboard_Connectors/CP002_TFC/fp-info-cache
 Keyboard_Connectors/CP003_TFC/fp-info-cache
 Amstrad_CPC_Keyboard/CPC6128/Tactile_12mm/fp-info-cache
 /Keyboard_Connectors/CPC664_TFC/CPC664_TFC-backups
+/CPC_PICOROM_PLUS/Hardware/Kicad/CPC_PICOROM_PLUS-backups
+/CPC_Plus_Floppy_Adaptor/CPC_Plus_Floppy_Adaptor-backups
+*.bak
+CPC_Plus_Floppy_Adaptor/fp-info-cache
+Keyboard_Connectors/CPC664_TFC/fp-info-cache
