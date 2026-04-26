@@ -1,0 +1,4 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description,Height,Mouser Part Number,Mouser Price/Stock,Manufacturer_Name
+J1,1,111-036-113L001,111-036-113L001,,111-036-113L001,,tht,I/O Connectors 36P Centronics male vertical dip solder,13.05,636-111-036-113L001,https://www.mouser.co.uk/ProductDetail/NorComp/111-036-113L001?qs=IGgAdOvCTsSmLhhYAltKCw%3D%3D,NorComp
+J2,1,Standard Floppy,PinHeader_2x17_P2.54mm_Vertical,,,,tht,"Generic connector, double row, 02x17, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,
+J3,1,CPC Floppy,PinHeader_2x13_P2.54mm_Vertical,,,,tht,"Generic connector, double row, 02x13, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,

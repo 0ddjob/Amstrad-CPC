@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "CPC_Plus_Floppy_Adaptor")(type "KiCad")(uri "${KIPRJMOD}/CPC_Plus_Floppy_Adaptor.pretty")(options "")(descr ""))
+)
