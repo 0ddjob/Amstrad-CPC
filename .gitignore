@@ -21,3 +21,5 @@ Amstrad_CPC_Keyboard/CPC6128/Tactile_12mm/fp-info-cache
 *.bak
 CPC_Plus_Floppy_Adaptor/fp-info-cache
 Keyboard_Connectors/CPC664_TFC/fp-info-cache
+CPC464_Dual_ROM/fp-info-cache
+/CPC464_Dual_ROM/CPC464_Dual_ROM-backups
