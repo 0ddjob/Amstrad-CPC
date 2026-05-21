@@ -1,0 +1,39 @@
+﻿pos_x,pos_y,rotation,side,designator,mpn,pack,footprint,value,mount_type
+86.36,-89.916,180.0,top,C1,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-84.328,180.0,top,C2,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-87.122,180.0,top,C3,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-100.076,180.0,top,C4,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-94.488,180.0,top,C5,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-97.282,180.0,top,C6,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-110.236,180.0,top,C7,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-104.648,180.0,top,C8,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+86.36,-107.442,180.0,top,C9,,,C_Disc_D3.4mm_W2.1mm_P2.50mm,100nF,tht
+84.105,-74.675,0.0,top,J1,,,BarrelJack_Horizontal,+5V IN,tht
+130.83,-149.142,90.0,top,J2,,,SJ335083ATR,CPC PLUS AUDIO OUT,tht
+124.42,-59.61,180.0,top,J3,,,SDF80J,CPC PLUS VIDEO IN,tht
+84.655,-59.61,180.0,top,J4,,,SDF80J,CPC VIDEO IN,tht
+127.762,-90.424,90.0,top,J5,,,PinHeader_1x02_P2.54mm_Vertical,VFREQ,tht
+110.752,-137.922,0.0,top,J6,,,DSUB-15-HD_Socket_Horizontal_P2.29x2.54mm_EdgePinOffset8.35mm_Housed_MountingHolesOffset10.89mm,VGA OUT,tht
+72.39,-85.344,0.0,top,R1,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,1KΩ,tht
+126.365,-130.175,90.0,top,R10,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,47Ω,tht
+123.19,-122.555,-90.0,top,R11,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+127.508,-72.898,-90.0,top,R12,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,100Ω,tht
+124.206,-80.518,90.0,top,R13,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,1KΩ,tht
+137.414,-72.898,-90.0,top,R14,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,75Ω,tht
+99.06,-122.555,-90.0,top,R15,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+95.885,-122.555,-90.0,top,R16,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,47Ω,tht
+102.235,-122.555,-90.0,top,R17,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+130.81,-72.898,-90.0,top,R18,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,75Ω,tht
+72.39,-99.314,0.0,top,R2,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,100Ω,tht
+80.01,-88.646,180.0,top,R3,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,68Ω,tht
+80.01,-96.012,180.0,top,R4,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,22Ω,tht
+134.112,-72.898,-90.0,top,R5,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,75Ω,tht
+109.855,-122.555,-90.0,top,R6,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+113.03,-130.175,90.0,top,R7,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,47Ω,tht
+106.68,-122.555,-90.0,top,R8,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+120.015,-122.555,-90.0,top,R9,,,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,220Ω,tht
+130.758,-100.04,180.0,top,SW1,,,SW_PUSH_6mm,RESET,tht
+92.075,-86.995,-90.0,top,U1,TLV3202AID,,SOIC-8_3.9x4.9mm_P1.27mm,TLV3202AID,smt
+92.075,-97.155,-90.0,top,U2,TLV3202AID,,SOIC-8_3.9x4.9mm_P1.27mm,TLV3202AID,smt
+109.335,-93.868,0.0,top,U3,,,RaspberryPi_Pico_Common_Unspecified,RASPBERRY PI PICO,tht
+92.075,-107.38,-90.0,top,U4,TLV3202AID,,SOIC-8_3.9x4.9mm_P1.27mm,TLV3202AID,smt
