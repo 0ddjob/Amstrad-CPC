@@ -18,4 +18,4 @@ R4,1,22Ω,R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,,,,tht,"Resistor, sma
 SW1,1,RESET,SW_PUSH_6mm,,,,tht,"Push button switch, generic, two pins",,,,
 U1,1,RASPBERRY PI PICO,RaspberryPi_Pico_Common_Unspecified,,,,tht,"Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2",,,,
 U2,1,74LVC245,SOIC-20W_7.5x12.8mm_P1.27mm,,,,smt,"Octal BUS Transceivers, 3-State outputs",,,,
-"U3, U4, U5",3,TLV3202AID,SOIC-8_3.9x4.9mm_P1.27mm,,TLV3202AID,,smt,"Dual, 40ns, microPower, Rail-to-Rail input  Comparator with Push-pull outputs",1.75,595-TLV3202AID,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3202AID?qs=b5Ofe9I6AaEPCPyfWxMBkg%3D%3D,Texas Instruments
+"U3, U4, U5",3,TLV3202,SOIC-8_3.9x4.9mm_P1.27mm,,TLV3202AID,,smt,"Dual, 40ns, microPower, Rail-to-Rail input  Comparator with Push-pull outputs",1.75,595-TLV3202AID,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3202AID?qs=b5Ofe9I6AaEPCPyfWxMBkg%3D%3D,Texas Instruments

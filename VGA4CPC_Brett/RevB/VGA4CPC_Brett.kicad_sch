@@ -8896,7 +8896,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV3202AID"
+		(property "Value" "TLV3202"
 			(at 337.82 72.39 0)
 			(effects
 				(font
@@ -10313,7 +10313,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV3202AID"
+		(property "Value" "TLV3202"
 			(at 337.82 171.45 0)
 			(effects
 				(font
@@ -10627,7 +10627,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV3202AID"
+		(property "Value" "TLV3202"
 			(at 339.09 121.92 0)
 			(effects
 				(font
