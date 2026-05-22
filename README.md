@@ -1,6 +1,24 @@
 # Amstrad CPC
 Amstrad CPC related projects.
 
+## [CPC PLUS Floppy Adaptor](/CPC_Plus_Floppy_Adaptor)
+An idea to convert the 6128 PLUS model's Centronics floppy connector to a more standard 26-way or 34-way pin header to connect a drive via a ribbon cable.<br>
+
+![CPC PLUS Floppy Adaptor](/CPC_Plus_Floppy_Adaptor/CPC_Plus_Floppy_Adaptor_3D.png)
+
+### Status
+21-May-2026: test boards being fabricated
+
+## [Dual ROM Adaptor for CPC464](/CPC464_Dual_ROM)
+An idea for a no-cut adaptor board to allow two 32KB ROM images to be installed/switchable on a 64KB EPROM.  This means you could have the original 464 firmware/BASIC 1.0 and 664 (or 6718) firmware/BASIC 1.1 easily switchable.  Alternatively you could install a diagnostic ROM in one of the 32KB banks.<br>
+
+Of course you would need to de-solder the original ROM and install this, but you wouldn't need to worry about cutting the PCB and wiring up pin 1.<br>
+
+![Dual ROM 3D](/CPC464_Dual_ROM/CPC464_Dual_ROM_3D.png)
+
+### Status
+21-May-2026: test boards being fabricated
+
 ## [Amstrad CPC Troubleshooting Keyboard](/Amstrad_CPC_Keyboard)
 Started off as a quick'n'dirty keyboard for my 2nd CPC664 motherboard that's missing the top case/keyboard, then morphed to a generic CPC keyboard that could be used for troubleshooting naked motherboards.<br>
 
