@@ -29,7 +29,7 @@ Started off as a quick'n'dirty keyboard for my 2nd CPC664 motherboard that's mis
 Trying out hardware projects from the book.
 
 ## [VGA4CPC](/VGA4CPC_Brett)
-A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr/vga4cpc) and [WacKEDmaN's enhanced firmware](https://github.com/WacKEDmaN/VGA4CPC-Enhanced).<br>
+A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr/vga4cpc) to use with [WacKEDmaN's enhanced firmware](https://github.com/WacKEDmaN/VGA4CPC-Enhanced).<br>
 
 I've added dual DIN sockets ... 6-pin for original CPC and 8-pin for CPC PLUS ... with the idea that a simple DIN-to-DIN cable can be used to connect.  I've also added pass-through of the PLUS's stereo audio as well as the monochrome LUM signal from both machines.<br>
 
