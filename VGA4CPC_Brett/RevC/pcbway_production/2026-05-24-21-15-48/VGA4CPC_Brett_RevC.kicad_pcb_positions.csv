@@ -13,7 +13,7 @@
 102.412,-80.69,-90.0,top,J2,,,1560099E,LUM OUT,tht
 160.274,-112.364,90.0,top,J3,,,BarrelJack_Horizontal,+5V IN,tht
 150.912,-108.94,0.0,top,J4,,,PinHeader_1x02_P2.54mm_Vertical,VFREQ,tht
-146.762,-122.69,-90.0,top,J5,,,PinHeader_1x06_P2.54mm_Vertical,SPARE GPIO,tht
+146.662,-123.19,-90.0,top,J5,,,PinHeader_1x07_P2.54mm_Vertical,SPARE GPIO,tht
 106.912,-107.27,-90.0,top,J6,,,DSUB-15-HD_Socket_Horizontal_P2.29x2.54mm_EdgePinOffset8.35mm_Housed_MountingHolesOffset10.89mm,VGA OUT,tht
 165.912,-109.69,180.0,top,R1,,,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,75Ω,tht
 116.162,-110.69,180.0,top,R10,,,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,150Ω,tht
