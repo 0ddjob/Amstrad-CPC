@@ -39,5 +39,9 @@ For power I thought it easiest to use a 2.1mm splitter cable to power both the C
 
 ![Brett's CPC-to-VGA board 3D](/VGA4CPC_Brett/RevB/VGA4CPC_Brett_RevB_3D.png)
 
+I've designed a smaller (<100x100mm so cheaper to fab) CPC-only board as Rev. C.
+
+![Brett's CPC-only board 3D](/VGA4CPC_Brett/RevC/VGA4CPC_Brett_RevC_3D.png)
+
 ### Status
 22-May-2025: pending fab & testing
