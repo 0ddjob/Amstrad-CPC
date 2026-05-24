@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "CPC to VGA Converter")
-		(date "22/MAY/2026")
-		(rev "B")
+		(date "24/MAY/2026")
+		(rev "C")
 		(company "Brett Hallen")
 		(comment 1 "https://github.com/WacKEDmaN/VGA4CPC-Enhanced")
 		(comment 2 "Enhanced firmware by WacKEDmaN:")
