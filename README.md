@@ -31,15 +31,12 @@ Trying out hardware projects from the book.
 ## [VGA4CPC](/VGA4CPC_Brett)
 A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr/vga4cpc) to use with [WacKEDmaN's enhanced firmware](https://github.com/WacKEDmaN/VGA4CPC-Enhanced).<br>
 
-I've added dual DIN sockets ... 6-pin for original CPC and 8-pin for CPC PLUS ... with the idea that a simple DIN-to-DIN cable can be used to connect.  I've also added pass-through of the PLUS's stereo audio as well as the monochrome LUM signal from both machines.<br>
-
-I've also added a buffer on the Pico VGA output stage as suggested by [WacKEDmaN](https://github.com/WacKEDmaN/VGA4CPC-Enhanced#optional-hardware-mods).<br>
-
-For power I thought it easiest to use a 2.1mm splitter cable to power both the CPC and the converter board.<br>
+- Rev. A: original re-design of grzegorz-gr's original, adding 6-pin & 8-pin DIN input sockets plus 3.5mm audio pass-through & 2.1mm DC power input
+- Rev. B: added buffer on VGA output as suggest by [WacKEDmaN](https://github.com/WacKEDmaN/VGA4CPC-Enhanced#optional-hardware-mods), pass-through for B&W LUM signal, extra push button & breakout of spare GPIOs
+- Rev. C: removed CPC PLUS 8-pin DIN to reduce board size (<100x100mm) for cheaper fabrication, adjusted resistor values
+- Rev. D: will try to add CPC PLUS 8-pin DIN back in if I can keep it under 100x100mm
 
 ![Brett's CPC-to-VGA board 3D](/VGA4CPC_Brett/RevB/VGA4CPC_Brett_RevB_3D.png)
-
-I've designed a smaller (<100x100mm so cheaper to fab) CPC-only board as Rev. C.
 
 ![Brett's CPC-only board 3D](/VGA4CPC_Brett/RevC/VGA4CPC_Brett_RevC_3D.png)
 
