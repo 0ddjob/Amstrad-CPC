@@ -2,5 +2,5 @@
 J1,1,DIN-6,SDF80J,,,,tht,6-pin DIN connector
 J2,1,CPC PLUS VIDEO IN,SDF80J,,,,tht,8-pin DIN connector
 J3,1,CPC PLUS AUDIO OUT,SJ335083ATR,,,,tht,"Audio Jack, 3 Poles (Stereo / TRS)"
-J4,1,VGA OUT,DSUB-15-HD_Socket_Horizontal_P2.29x2.54mm_EdgePinOffset8.35mm_Housed_MountingHolesOffset10.89mm,,,,tht,"15-pin D-SUB connector, socket (female), High density (3 columns), Triple Row, Generic, VGA-connector, Mounting Hole"
+J4,1,15KHz VGA OUT,DSUB-15-HD_Socket_Horizontal_P2.29x2.54mm_EdgePinOffset8.35mm_Housed_MountingHolesOffset10.89mm,,,,tht,"15-pin D-SUB connector, socket (female), High density (3 columns), Triple Row, Generic, VGA-connector, Mounting Hole"
 J5,1,LUM OUT,1560099E,,,,tht,"coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"

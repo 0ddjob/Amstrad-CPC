@@ -1693,8 +1693,8 @@
 				)
 			)
 		)
-		(property "Value" "VGA OUT"
-			(at -13.5 -3.42 90)
+		(property "Value" "15KHz VGA OUT"
+			(at -13.105 -3.3855 90)
 			(layer "F.SilkS")
 			(uuid "e44852c4-e449-4c9d-a22d-4f8a6e44030a")
 			(effects

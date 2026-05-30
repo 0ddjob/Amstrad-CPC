@@ -2862,7 +2862,7 @@
 				)
 			)
 		)
-		(property "Value" "VGA OUT"
+		(property "Value" "15KHz VGA OUT"
 			(at 172.72 20.32 0)
 			(effects
 				(font
