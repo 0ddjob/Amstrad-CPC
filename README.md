@@ -35,6 +35,7 @@ A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr
 - Rev. B: added buffer on VGA output as suggest by [WacKEDmaN](https://github.com/WacKEDmaN/VGA4CPC-Enhanced#optional-hardware-mods), pass-through for B&W LUM signal, extra push button & breakout of spare GPIOs
 - Rev. C: removed CPC PLUS 8-pin DIN to reduce board size (<100x100mm) for cheaper fabrication, adjusted resistor values
 - Rev. D: added the CPC PLUS 8-pin DIN back in plus 3.5mm stereo audio output, remaining under 100x100mm
+- Rev. E: swapped TLV3212 (SOIC-8) comparator for TLV3232 (SSOP-8) as it's faster
 
 ![Brett's CPC-only board 3D](/VGA4CPC_Brett/RevC/VGA4CPC_Brett_RevC_3D.png)
 
