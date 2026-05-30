@@ -1,0 +1,9 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description,Height,Mouser Part Number,Mouser Price/Stock,Manufacturer_Name
+"C1, C2, C3, C4, C5, C6, C7, C8, C9",9,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,,,,smt,,,,,
+J1,1,INPUT,PinHeader_1x05_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)",,,,
+J2,1,OUTPUT,PinHeader_1x06_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",,,,
+R1,1,17KΩ,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,,,smt,"Resistor, small symbol",,,,
+R2,1,3KΩ,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,,,smt,"Resistor, small symbol",,,,
+R3,1,19KΩ,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,,,smt,"Resistor, small symbol",,,,
+R4,1,1KΩ,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,,,,smt,"Resistor, small symbol",,,,
+"U1, U2, U3",3,TLV3232,VSSOP-8_3x3mm_P0.65mm,,TLV3202AID,,smt,"Dual, 40ns, microPower, Rail-to-Rail input  Comparator with Push-pull outputs",1.75,595-TLV3202AID,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TLV3202AID?qs=b5Ofe9I6AaEPCPyfWxMBkg%3D%3D,Texas Instruments
