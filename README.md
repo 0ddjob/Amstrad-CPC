@@ -36,13 +36,14 @@ A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr
 - Rev. C: removed CPC PLUS 8-pin DIN to reduce board size (<100x100mm) for cheaper fabrication, adjusted resistor values
 - Rev. D: added the CPC PLUS 8-pin DIN back in plus 3.5mm stereo audio output, remaining under 100x100mm
 - Rev. E: swapped TLV3212 (SOIC-8) comparator for TLV3232 (SSOP-8) as it's faster
+- Rev. F: moved the [comparator to its own daughterboard](/Amstrad-CPC/VGA4CPC_Brett/Comparator_Board) (simplifies circuit routing), switched to 5V logic (Pico 2 required), also switching the 74LVC245 (SMD) to 74HCT245 (THT)
 
 ![Brett's CPC-only board 3D](/VGA4CPC_Brett/RevC/VGA4CPC_Brett_RevC_3D.png)
 
 ![Brett's CPC-to-VGA board 3D](/VGA4CPC_Brett/RevD/VGA4CPC_Brett_RevD_3D.png)
 
 ### Status
-22-May-2025: pending fab & testing
+22-May-2025: Rev. C pending fab & testing
 
 ## [CPC DIN to VGA](/CPC_DIN-to-VGA)
 This is just a very simple connector converter - convert the CPC/CPC PLUS DIN to VGA, with also an RCA for the B&W LUM signal and 3.5mm stereo socket for the PLUSs' audio output.<br>
