@@ -1,0 +1,21 @@
+﻿Designator,Quantity,Value,Footprint,Package,MPN,DNP,Mount_Type,Description
+C1,1,100nF,C_Disc_D3.0mm_W2.0mm_P2.50mm,,,,tht,
+"H1, H2, H3, H4",4,MountingHole,MountingHole_3.2mm_M3,,,,tht,
+J1,1,CPC VIDEO IN,SDF80J,,,,tht,Same Sky SDF-60J 6-pin DIN Socket
+J2,1,LUM OUT,1560099E,,,,tht,"coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+J3,1,+5V IN,BarrelJack_Horizontal,,,,tht,DC Barrel Jack
+J4,1,VFREQ,PinHeader_1x02_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+J5,1,SPARE GPIO,PinHeader_1x07_P2.54mm_Vertical,,,,tht,"Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"
+J6,1,VGA OUT,DSUB-15-HD_Socket_Horizontal_P2.29x2.54mm_EdgePinOffset8.35mm_Housed_MountingHolesOffset10.89mm,,,,tht,"15-pin D-SUB connector, socket (female), High density (3 columns), Triple Row, Generic, VGA-connector, Mounting Hole"
+J7,1,CPC PLUS VIDEO IN,SDF80J,,,,tht,8-pin DIN connector
+J8,1,CPC PLUS AUDIO OUT,SJ335083ATR,,,,tht,"Audio Jack, 3 Poles (Stereo / TRS)"
+"R1, R2, R3",3,75Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,,,,tht,"Resistor, small symbol"
+"R10, R11, R6, R7, R8, R9",6,820Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,,,,tht,"Resistor, small symbol"
+"R12, R13",2,220Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,,,,tht,"Resistor, small symbol"
+R4,1,100Ω,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,,,,tht,"Resistor, small symbol"
+R5,1,1KΩ,R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical,,,,tht,"Resistor, small symbol"
+SW1,1,RESET,SW_PUSH_6mm,,,,tht,"Push button switch, generic, two pins"
+SW2,1,WACKED,SW_PUSH_6mm,,,,tht,"Push button switch, generic, two pins"
+U1,1,RASPBERRY PI PICO2,RaspberryPi_Pico_Common_Unspecified,,,,tht,"Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
+U2,1,74HCT245,DIP-20_W7.62mm,,,,tht,"Octal BUS Transceivers, 3-State outputs"
+U6,1,Comparator Daughterboard,Comparator Daughterboard,,,,tht,

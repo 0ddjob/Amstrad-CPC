@@ -6,8 +6,8 @@
 	(paper "A3")
 	(title_block
 		(title "CPC to VGA Converter")
-		(date "30/MAY/2026")
-		(rev "E")
+		(date "31/MAY/2026")
+		(rev "F")
 		(company "Brett Hallen")
 		(comment 1 "https://github.com/WacKEDmaN/VGA4CPC-Enhanced")
 		(comment 2 "Enhanced firmware by WacKEDmaN:")
@@ -4953,6 +4953,267 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "VGA4CPC_Symbols:Comparator_Daughterboard"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Comparator Daughterboard"
+				(at 0 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "VGA4CPC_Footprints:Comparator Daughterboard"
+				(at 5.08 -22.86 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Comparator_Daughterboard_1_1"
+				(rectangle
+					(start -7.62 0)
+					(end 5.08 -17.78)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type color)
+						(color 255 255 0 1)
+					)
+				)
+				(pin input line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "CPC_{RED}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -7.62 0)
+					(length 2.54)
+					(name "CPC_{GREEN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -10.16 0)
+					(length 2.54)
+					(name "CPC_{BLUE}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -12.7 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -15.24 0)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "B_{0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "B_{1}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -7.62 180)
+					(length 2.54)
+					(name "G_{0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -10.16 180)
+					(length 2.54)
+					(name "G_{1}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -12.7 180)
+					(length 2.54)
+					(name "R_{0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 -15.24 180)
+					(length 2.54)
+					(name "R_{1}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers
@@ -5216,7 +5477,7 @@
 	)
 	(text_box "From CPC Video Connector to Comparators:\nCPC_R\nCPC_G\nCPC_B\n\nCPC_CSYNC converted to 3.3V CSYNC\n\nFrom comparators to Pico (2-bits per colour):\nR_{0} & R_{0}\nG_{0} & G_{0}\nB_{0} & B_{0}\n\nPass-through:\nLUM (B&W video)\nCPC PLUS audio"
 		(exclude_from_sim no)
-		(at 346.71 25.4 0)
+		(at 351.79 17.78 0)
 		(size 52.07 33.02)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -5253,6 +5514,26 @@
 			(justify left top)
 		)
 		(uuid "2fba592e-e12d-4e1b-bdcc-3849d3b0f247")
+	)
+	(text_box "Moved to separate daughterboard"
+		(exclude_from_sim no)
+		(at 294.64 58.42 0)
+		(size 104.14 148.59)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "69057375-8c89-43f6-a46a-0efa81e1dcd1")
 	)
 	(text_box "VFREQ Switch\nClosed: 800x600 @ 60Hz\nOpen:   720x576 @ 50Hz"
 		(exclude_from_sim no)
@@ -5336,7 +5617,7 @@
 	)
 	(text_box "Duplicated resistor ladders to simplify PCB routing"
 		(exclude_from_sim no)
-		(at 280.67 129.54 0)
+		(at 323.85 107.95 0)
 		(size 27.94 8.89)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -5353,26 +5634,6 @@
 			(justify left top)
 		)
 		(uuid "d83f63a5-8d21-4088-954f-f83b5c015385")
-	)
-	(text_box "Close impedance match to VGA:\nBit 0 (LSB) = 150Ω\nBit 1 (MSB) = 75Ω\nMore weight put on MSB."
-		(exclude_from_sim no)
-		(at 175.26 204.47 0)
-		(size 34.29 10.16)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "ec0bee78-130b-4529-a536-656cddaf85c3")
 	)
 	(junction
 		(at 82.55 100.33)
@@ -5417,6 +5678,12 @@
 		(uuid "4fb974da-ea78-4098-9319-63c713818500")
 	)
 	(junction
+		(at 160.02 207.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "66d33ab7-bba2-436e-885c-b87ff77082ab")
+	)
+	(junction
 		(at 374.65 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5447,12 +5714,6 @@
 		(uuid "dcdb9af6-f2b9-4338-ac23-58ffa5633a8b")
 	)
 	(junction
-		(at 160.02 207.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e94903bb-862a-459d-959c-794760af08ed")
-	)
-	(junction
 		(at 160.02 251.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5481,6 +5742,10 @@
 		(uuid "3905bccb-d277-4578-b3ab-340b5a7346f6")
 	)
 	(no_connect
+		(at 186.69 53.34)
+		(uuid "521adec6-b978-4116-9f11-e8ef3d055860")
+	)
+	(no_connect
 		(at 261.62 241.3)
 		(uuid "b6f6383b-fc01-4daf-b47c-bc0b8361e09b")
 	)
@@ -5499,6 +5764,16 @@
 	(no_connect
 		(at 181.61 53.34)
 		(uuid "f43fc448-501e-4fa4-b5f7-bd8823989ffd")
+	)
+	(wire
+		(pts
+			(xy 246.38 106.68) (xy 246.38 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0512c7d6-c925-4410-934b-3f5a79457c8e")
 	)
 	(wire
 		(pts
@@ -5552,7 +5827,17 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 241.3) (xy 147.32 241.3)
+			(xy 255.27 104.14) (xy 255.27 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ec7c154-3ef8-4d7c-ba26-90d089852029")
+	)
+	(wire
+		(pts
+			(xy 138.43 243.84) (xy 142.24 243.84)
 		)
 		(stroke
 			(width 0)
@@ -5619,16 +5904,6 @@
 			(type default)
 		)
 		(uuid "232a52ad-e038-4375-8500-d089c64382cc")
-	)
-	(wire
-		(pts
-			(xy 179.07 226.06) (xy 177.8 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2393ca07-f308-47a6-b434-fd1bf80659c9")
 	)
 	(wire
 		(pts
@@ -5722,6 +5997,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 113.03) (xy 261.62 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39aafed0-dd65-4798-a536-604b7d5e0f7f")
+	)
+	(wire
+		(pts
 			(xy 238.76 228.6) (xy 238.76 238.76)
 		)
 		(stroke
@@ -5732,13 +6017,13 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 218.44) (xy 177.8 218.44)
+			(xy 179.07 231.14) (xy 177.8 231.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "411d21d0-9cf5-4d8f-b6fb-d27bd2a0a3c3")
+		(uuid "407a4bef-7ac4-4f98-8c65-0623e0236cd7")
 	)
 	(wire
 		(pts
@@ -5772,6 +6057,16 @@
 	)
 	(wire
 		(pts
+			(xy 177.8 223.52) (xy 179.07 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "486b6a8d-557a-4cba-ae8a-49b6b38dedba")
+	)
+	(wire
+		(pts
 			(xy 383.54 134.62) (xy 383.54 135.89)
 		)
 		(stroke
@@ -5779,16 +6074,6 @@
 			(type default)
 		)
 		(uuid "4bbfae48-6081-4ca4-84ae-10694ee0742b")
-	)
-	(wire
-		(pts
-			(xy 179.07 223.52) (xy 179.07 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d26bb3c-60d4-47af-a4f4-780d2796db43")
 	)
 	(wire
 		(pts
@@ -5812,16 +6097,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 218.44) (xy 179.07 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5137cb1c-0fb1-4a41-a7d8-5d42a86c59c0")
-	)
-	(wire
-		(pts
 			(xy 57.15 96.52) (xy 63.5 96.52)
 		)
 		(stroke
@@ -5842,16 +6117,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 228.6) (xy 179.07 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e4dcfc3-8e26-4fb2-802d-6218304a1ebb")
-	)
-	(wire
-		(pts
 			(xy 382.27 184.15) (xy 382.27 185.42)
 		)
 		(stroke
@@ -5859,16 +6124,6 @@
 			(type default)
 		)
 		(uuid "5e66a799-daf5-4022-a84b-fd9f8100a113")
-	)
-	(wire
-		(pts
-			(xy 179.07 220.98) (xy 177.8 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63a78fd9-8a6e-4b24-9755-6fef8f0121e0")
 	)
 	(wire
 		(pts
@@ -5992,6 +6247,36 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 241.3) (xy 147.32 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a2bbf14-b757-4df3-9d57-cfe5dbe288c1")
+	)
+	(wire
+		(pts
+			(xy 261.62 104.14) (xy 255.27 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bd59e88-2832-465d-b7c9-1865286bae97")
+	)
+	(wire
+		(pts
+			(xy 246.38 113.03) (xy 261.62 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c4d1b79-c00a-4c6d-ba3b-048bc5e8fe5f")
+	)
+	(wire
+		(pts
 			(xy 77.47 109.22) (xy 71.12 109.22)
 		)
 		(stroke
@@ -6102,6 +6387,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 223.52) (xy 179.07 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9641c4a9-67f0-4111-8f5b-4f2d8c178f1e")
+	)
+	(wire
+		(pts
 			(xy 238.76 228.6) (xy 246.38 228.6)
 		)
 		(stroke
@@ -6172,13 +6467,13 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 231.14) (xy 177.8 231.14)
+			(xy 179.07 226.06) (xy 177.8 226.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac511b08-d2e0-4931-a55f-44610466c12d")
+		(uuid "aaa6f494-297c-47c7-a6d0-a7ebcbaf179e")
 	)
 	(wire
 		(pts
@@ -6189,6 +6484,16 @@
 			(type default)
 		)
 		(uuid "ae004ce9-5fa6-44fa-9d5e-075703eeb056")
+	)
+	(wire
+		(pts
+			(xy 177.8 228.6) (xy 179.07 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae49cc9f-ec4c-474b-8705-5006ae2b2854")
 	)
 	(wire
 		(pts
@@ -6272,6 +6577,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.07 233.68) (xy 177.8 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beceb53c-8e86-4381-b7d9-f73d368f73ee")
+	)
+	(wire
+		(pts
 			(xy 160.02 252.73) (xy 160.02 251.46)
 		)
 		(stroke
@@ -6289,6 +6604,16 @@
 			(type default)
 		)
 		(uuid "c718d7d8-e7d5-4aea-a98f-b8dd4b2a856b")
+	)
+	(wire
+		(pts
+			(xy 179.07 233.68) (xy 179.07 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca4d156c-246f-4d5f-aea5-88cf162b1858")
 	)
 	(wire
 		(pts
@@ -6329,6 +6654,16 @@
 			(type default)
 		)
 		(uuid "d28ca4e9-82a0-4c9d-8fa8-c2cd4e9520c6")
+	)
+	(wire
+		(pts
+			(xy 179.07 236.22) (xy 177.8 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3b2c5a4-3b6f-4422-b25c-6e9309f9f5d6")
 	)
 	(wire
 		(pts
@@ -6402,16 +6737,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 228.6) (xy 179.07 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd8a42e8-934a-4801-ab45-2226591ffe4c")
-	)
-	(wire
-		(pts
 			(xy 82.55 100.33) (xy 82.55 104.14)
 		)
 		(stroke
@@ -6432,13 +6757,13 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 223.52) (xy 179.07 223.52)
+			(xy 142.24 243.84) (xy 142.24 241.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e0243c27-7963-4c44-8003-0b3114ead611")
+		(uuid "e53e0f6a-31b3-491d-82f4-da1318d43d60")
 	)
 	(wire
 		(pts
@@ -6459,6 +6784,16 @@
 			(type default)
 		)
 		(uuid "ee2a69c2-4a52-4eea-8ac3-77ae40c0aefb")
+	)
+	(wire
+		(pts
+			(xy 179.07 228.6) (xy 179.07 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee994bad-9355-4bd8-a88b-75accc836057")
 	)
 	(wire
 		(pts
@@ -7073,6 +7408,26 @@
 			)
 		)
 	)
+	(label "CPC_G"
+		(at 261.62 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "02bdff6c-bce2-43b6-87a2-67c77e0fc59c")
+	)
+	(label "CPC_B"
+		(at 261.62 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "04f5f4ae-c9bf-4cb0-a571-847aed638ee2")
+	)
 	(label "R_{0}"
 		(at 158.75 86.36 180)
 		(effects
@@ -7113,6 +7468,16 @@
 		)
 		(uuid "0fee23c1-7174-4ee9-991f-4f51c75de530")
 	)
+	(label "G_{1}"
+		(at 279.4 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10124111-8dae-403d-85cd-2373ebcc8831")
+	)
 	(label "INT_VSYNC"
 		(at 158.75 93.98 180)
 		(effects
@@ -7144,6 +7509,16 @@
 		(uuid "143472e2-6eda-4f36-80c7-bab156a18caa")
 	)
 	(label "CPC_R"
+		(at 261.62 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1716acae-2f13-4ebf-8925-5b3ea35d3689")
+	)
+	(label "CPC_R"
 		(at 346.71 184.15 180)
 		(effects
 			(font
@@ -7162,6 +7537,16 @@
 			(justify left bottom)
 		)
 		(uuid "17fec4f4-3fbc-408b-8611-78635533c08e")
+	)
+	(label "VGA_HSYNC"
+		(at 147.32 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "18806ce7-79f9-4954-b0ea-90f336643e21")
 	)
 	(label "G_{1}"
 		(at 158.75 83.82 180)
@@ -7183,16 +7568,6 @@
 		)
 		(uuid "1b1ad912-0174-4688-b54b-cb158de3999d")
 	)
-	(label "VGA_VSYNC_{B}"
-		(at 177.8 236.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1f46aab8-5588-40f3-8764-87bb0a4d9f01")
-	)
 	(label "CPC_R"
 		(at 63.5 96.52 180)
 		(effects
@@ -7212,6 +7587,16 @@
 			(justify right bottom)
 		)
 		(uuid "24677b90-688f-42b3-8afc-9ce8bac60b79")
+	)
+	(label "VGA_R_{1}"
+		(at 147.32 223.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2467a103-77dd-47d7-bab9-f30987bfc5b1")
 	)
 	(label "R_{1}"
 		(at 374.65 181.61 0)
@@ -7283,15 +7668,15 @@
 		)
 		(uuid "3bee8272-e235-40d7-9b56-afa725a03a2c")
 	)
-	(label "VGA_G"
-		(at 179.07 219.71 0)
+	(label "VGA_B_{1}"
+		(at 147.32 231.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "3eabd2cc-92b9-4c01-98bc-4356c09240e3")
+		(uuid "433d8e20-e12e-4e7f-8ea1-9ae92f851c34")
 	)
 	(label "CPC_B"
 		(at 77.47 60.96 0)
@@ -7303,16 +7688,6 @@
 		)
 		(uuid "447fc27e-8239-4733-84ff-154717ee28d8")
 	)
-	(label "VGA_R"
-		(at 179.07 229.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "49fd6544-6482-4e26-972d-feac0fb32b89")
-	)
 	(label "VGA_VSYNC_{B}"
 		(at 261.62 236.22 0)
 		(effects
@@ -7322,6 +7697,26 @@
 			(justify left bottom)
 		)
 		(uuid "4fed0e55-0370-4a7f-89a6-b40a3fc66ff2")
+	)
+	(label "VGA_R"
+		(at 179.07 224.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5134969e-9a77-43a1-a95c-0dd6d03a8ba4")
+	)
+	(label "VGA_G_{0}"
+		(at 147.32 236.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "51968be6-29b5-4fbc-a94b-8e08905dd741")
 	)
 	(label "INT_VSYNC"
 		(at 158.75 101.6 180)
@@ -7363,6 +7758,16 @@
 		)
 		(uuid "5d11cc14-94f8-4663-946e-ceb44456fb78")
 	)
+	(label "VGA_VSYNC"
+		(at 147.32 220.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5df90ae1-8afb-47f1-9d20-7334dc1ac391")
+	)
 	(label "GPIO28"
 		(at 204.47 109.22 0)
 		(effects
@@ -7372,6 +7777,16 @@
 			(justify left bottom)
 		)
 		(uuid "5f335f60-63e0-4b01-ae4b-7d28f1447a89")
+	)
+	(label "VGA_G_{1}"
+		(at 147.32 233.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "60946bfe-9322-462a-a016-387c9462c854")
 	)
 	(label "CPC_R"
 		(at 62.23 60.96 180)
@@ -7403,16 +7818,6 @@
 		)
 		(uuid "6d9a0d1c-675b-4dc5-9ee4-c7d8865ad3cc")
 	)
-	(label "VGA_VSYNC"
-		(at 147.32 236.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6fa7c792-c186-47d9-96a8-0dd2c17c53cc")
-	)
 	(label "VGA_G_{0}"
 		(at 204.47 78.74 0)
 		(effects
@@ -7423,6 +7828,16 @@
 		)
 		(uuid "6fd2cffd-7cad-4cce-8a31-6c800ca5f76a")
 	)
+	(label "R_{0}"
+		(at 279.4 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7376adc8-ab7b-434c-a3b5-56fb9ceda42b")
+	)
 	(label "GPIO20"
 		(at 204.47 88.9 0)
 		(effects
@@ -7432,16 +7847,6 @@
 			(justify left bottom)
 		)
 		(uuid "7461b6f0-40e0-4bda-acc2-94f159fa2a1f")
-	)
-	(label "VGA_B_{0}"
-		(at 147.32 226.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "7c28af2c-63e6-45bc-81d2-636d62601bbb")
 	)
 	(label "VGA_HSYNC"
 		(at 158.75 106.68 180)
@@ -7483,6 +7888,16 @@
 		)
 		(uuid "864b6648-d7ac-41e7-b647-7b9ae20e304f")
 	)
+	(label "VGA_B_{0}"
+		(at 147.32 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8679b0ff-a2b9-4828-85ad-172c6cd4d5b2")
+	)
 	(label "B_{1}"
 		(at 158.75 78.74 180)
 		(effects
@@ -7502,16 +7917,6 @@
 			(justify right bottom)
 		)
 		(uuid "89cf60f2-f616-4869-93b7-43a1d866606c")
-	)
-	(label "VGA_B"
-		(at 179.07 224.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8bdf5c4e-ec70-4e00-9876-9173a222a70c")
 	)
 	(label "GPIO9"
 		(at 158.75 99.06 180)
@@ -7603,6 +8008,16 @@
 		)
 		(uuid "9ebd4492-5ab4-4c3d-8e0a-6ac3b55283f0")
 	)
+	(label "VGA_VSYNC_{B}"
+		(at 177.8 220.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a09a32c5-410d-4bc8-942d-1210e74757ca")
+	)
 	(label "GPIO9"
 		(at 264.16 52.07 180)
 		(effects
@@ -7613,6 +8028,16 @@
 		)
 		(uuid "a197d01c-768c-4876-bb0f-59a7d1634047")
 	)
+	(label "G_{0}"
+		(at 279.4 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a512fe99-c58b-43e4-9701-19a1cd11ade2")
+	)
 	(label "UPPER"
 		(at 374.65 184.15 0)
 		(effects
@@ -7622,16 +8047,6 @@
 			(justify left bottom)
 		)
 		(uuid "a61a3b90-40bd-4eed-a79f-72020f8784df")
-	)
-	(label "VGA_G_{0}"
-		(at 147.32 218.44 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a6d1eca9-915c-43b8-9539-a84c60472e59")
 	)
 	(label "CPC_B"
 		(at 374.65 87.63 0)
@@ -7663,15 +8078,25 @@
 		)
 		(uuid "aadd07ee-fb5f-4947-864c-f6924202b206")
 	)
-	(label "VGA_R_{0}"
-		(at 147.32 228.6 180)
+	(label "VGA_G"
+		(at 179.07 234.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "ae5658d7-6339-4ce1-b190-65822f2b7e5a")
+		(uuid "ab924431-09e2-4134-971c-aa60984bfbef")
+	)
+	(label "VGA_HSYNC_{B}"
+		(at 177.8 218.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acec4715-d43c-42bc-82c4-22bd52852dca")
 	)
 	(label "GPIO27"
 		(at 204.47 106.68 0)
@@ -7682,16 +8107,6 @@
 			(justify left bottom)
 		)
 		(uuid "b216a85d-789d-4b21-bf77-3e13d9036b8d")
-	)
-	(label "VGA_B_{1}"
-		(at 147.32 223.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b2ee12c0-5f24-41cb-af7c-87d0ac30a686")
 	)
 	(label "G_{0}"
 		(at 158.75 81.28 180)
@@ -7713,16 +8128,6 @@
 		)
 		(uuid "b95f313c-4bf9-49b4-ace4-92be80bc5bb6")
 	)
-	(label "VGA_G_{1}"
-		(at 147.32 220.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c667c520-8a85-4e26-b1a9-84ab2c73583c")
-	)
 	(label "CPC_AUDIO_L"
 		(at 62.23 66.04 180)
 		(effects
@@ -7742,6 +8147,16 @@
 			(justify left bottom)
 		)
 		(uuid "c7b5f531-f3c9-4f90-9740-a5e93d3aa066")
+	)
+	(label "B_{1}"
+		(at 279.4 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c96d72ec-e986-4e7e-9570-c0f607b1546e")
 	)
 	(label "R_{1}"
 		(at 158.75 88.9 180)
@@ -7782,26 +8197,6 @@
 			(justify left bottom)
 		)
 		(uuid "d3f7762b-a3e9-4592-aba9-877cebcf732b")
-	)
-	(label "VGA_R_{1}"
-		(at 147.32 231.14 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d4fd7c77-51ab-4d09-b3f4-9dfbbb2df580")
-	)
-	(label "VGA_HSYNC_{B}"
-		(at 177.8 233.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5e8a68e-12ad-4eb7-bd1c-e2f4807d1419")
 	)
 	(label "CPC_G"
 		(at 63.5 91.44 180)
@@ -7873,6 +8268,16 @@
 		)
 		(uuid "ebda0db5-0ef1-4a44-8342-8457bf57e8af")
 	)
+	(label "VGA_R_{0}"
+		(at 147.32 226.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "eec61cab-0d02-480b-8ff7-39403bb026f3")
+	)
 	(label "CPC_CSYNC"
 		(at 78.74 91.44 0)
 		(effects
@@ -7903,15 +8308,15 @@
 		)
 		(uuid "f70238d2-b236-49f4-889c-3a95ae78d211")
 	)
-	(label "VGA_HSYNC"
-		(at 147.32 233.68 180)
+	(label "R_{1}"
+		(at 279.4 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "f84424cb-e8af-4a9b-af38-b454f7da7cc2")
+		(uuid "f78d87df-fde8-4df2-8c96-d5cebef7595f")
 	)
 	(label "LOWER"
 		(at 347.98 132.08 180)
@@ -7933,6 +8338,16 @@
 		)
 		(uuid "fab44173-8027-4951-9139-d431e41164c7")
 	)
+	(label "B_{0}"
+		(at 279.4 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fabe4988-43f0-4720-b15b-83a21d91b0f0")
+	)
 	(label "VGA_G"
 		(at 246.38 226.06 180)
 		(effects
@@ -7943,13 +8358,23 @@
 		)
 		(uuid "fb85d5d8-b269-4cdd-b007-7534d1a53955")
 	)
+	(label "VGA_B"
+		(at 179.07 229.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd860e96-109d-42b7-aa08-415873c910a4")
+	)
 	(symbol
 		(lib_id "Device:C_Small")
 		(at 383.54 74.93 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03c8456a-b2b2-4591-b75d-82947b483118")
@@ -8002,9 +8427,75 @@
 			(uuid "9841ad28-11f7-413b-8171-afc96a1b2df2")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 160.02 207.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "06bc19a1-51b1-4764-9ba9-e5549baeb3a2")
+		(property "Reference" "#PWR08"
+			(at 160.02 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 160.02 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 160.02 207.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8fb9c75f-2503-4b51-82de-9d7f865cf21e")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -8070,7 +8561,7 @@
 			(uuid "8159f2e3-04e3-431a-8243-3e83eb56f81a")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R4")
 					(unit 1)
@@ -8254,7 +8745,7 @@
 			(uuid "c38f8bc6-dc6a-459c-9c4b-4e6ed7c8f3fd")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "U1")
 					(unit 1)
@@ -8264,7 +8755,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 220.98 90)
+		(at 175.26 236.22 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8273,7 +8764,7 @@
 		(dnp no)
 		(uuid "0f2ba3eb-ae3e-4cb9-aa3d-79f4c7c6c0b9")
 		(property "Reference" "R7"
-			(at 175.514 223.266 90)
+			(at 175.514 238.506 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8281,8 +8772,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "75Ω"
-			(at 175.26 225.552 90)
+		(property "Value" "820Ω"
+			(at 175.26 240.792 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8291,7 +8782,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 220.98 0)
+			(at 175.26 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8300,7 +8791,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 220.98 0)
+			(at 175.26 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8309,7 +8800,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 220.98 0)
+			(at 175.26 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8324,7 +8815,7 @@
 			(uuid "1b824825-d886-41b1-96ea-79ef86d32ec7")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R7")
 					(unit 1)
@@ -8391,7 +8882,7 @@
 			(uuid "969db4ef-9001-475a-ab31-e2dd819973a2")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "SW2")
 					(unit 1)
@@ -8401,7 +8892,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 236.22 90)
+		(at 175.26 220.98 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8409,7 +8900,7 @@
 		(dnp no)
 		(uuid "14d240b2-4600-4089-a8fc-94bdad5b6b8f")
 		(property "Reference" "R13"
-			(at 175.006 241.554 90)
+			(at 175.006 226.314 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8418,7 +8909,7 @@
 			)
 		)
 		(property "Value" "220Ω"
-			(at 175.006 239.014 90)
+			(at 175.006 223.774 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8427,7 +8918,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 236.22 0)
+			(at 175.26 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8436,7 +8927,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 236.22 0)
+			(at 175.26 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8445,7 +8936,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 236.22 0)
+			(at 175.26 220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8460,7 +8951,7 @@
 			(uuid "869356ca-ded7-47f8-97b0-7f6db55393d6")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R13")
 					(unit 1)
@@ -8527,7 +9018,7 @@
 			(uuid "cbccf0aa-841f-48ad-8805-ceece46b0fde")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR039")
 					(unit 1)
@@ -8537,7 +9028,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 226.06 90)
+		(at 175.26 231.14 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8545,7 +9036,7 @@
 		(dnp no)
 		(uuid "1ab026cc-2170-4400-9ac6-c83b0e00b9c2")
 		(property "Reference" "R9"
-			(at 175.006 221.488 90)
+			(at 175.006 226.568 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8553,8 +9044,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "150Ω"
-			(at 175.514 223.52 90)
+		(property "Value" "820Ω"
+			(at 175.514 228.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8563,7 +9054,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 226.06 0)
+			(at 175.26 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8572,7 +9063,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 226.06 0)
+			(at 175.26 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8581,7 +9072,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 226.06 0)
+			(at 175.26 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8596,7 +9087,7 @@
 			(uuid "a6aa8222-b7c5-4b7a-8b66-31fd79f9000b")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R9")
 					(unit 1)
@@ -8611,7 +9102,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d043b4e-1eb3-4a4d-91cc-e10cd4dd4cd4")
@@ -8663,7 +9154,7 @@
 			(uuid "185845a5-f0b2-4c12-90e6-7de292e298f1")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR020")
 					(unit 1)
@@ -8677,7 +9168,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e02f143-07e9-44c5-ae5a-ae355deb3641")
@@ -8730,7 +9221,7 @@
 			(uuid "d3962510-6d65-4bbb-8fc2-057e10d583dd")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C9")
 					(unit 1)
@@ -8744,7 +9235,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ea0bd90-f74c-4757-8000-cd666f4ae962")
@@ -8868,7 +9359,7 @@
 			(uuid "411e7f45-37c1-4ab2-a0f2-ea6c9165ccc6")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "U3")
 					(unit 1)
@@ -8938,7 +9429,7 @@
 			(uuid "5498e554-6c70-4316-bd61-6cfba7288642")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J2")
 					(unit 1)
@@ -8952,7 +9443,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "238e0270-6b73-4a2e-8af2-d81e8b4d515d")
@@ -9008,7 +9499,7 @@
 			(uuid "912becef-64ac-4d15-9f98-7d53d6d1a01d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R19")
 					(unit 1)
@@ -9023,7 +9514,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2585000d-ebfc-4b91-951a-f2e9564c3e6d")
@@ -9075,7 +9566,7 @@
 			(uuid "78fc8194-9ac4-4f39-927f-292382bcee83")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR025")
 					(unit 1)
@@ -9089,7 +9580,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "290c766c-a286-43f4-b424-30a6ed307342")
@@ -9145,7 +9636,7 @@
 			(uuid "90751d01-e84a-41c7-b2e5-1b5c79866cad")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R21")
 					(unit 1)
@@ -9160,7 +9651,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33b76dbe-f429-4e60-9639-c93d35ff4e34")
@@ -9212,7 +9703,7 @@
 			(uuid "e87d4c5f-3ad6-49d1-860e-b02f3d6c9ef4")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR035")
 					(unit 1)
@@ -9226,7 +9717,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35b8a7e2-d4c5-45e6-aa26-a704d29fe02f")
@@ -9279,7 +9770,7 @@
 			(uuid "8d6e75ed-3dca-4b0f-a17d-1567c9d0d0eb")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C10")
 					(unit 1)
@@ -9294,7 +9785,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3823164d-c9c6-43c8-9904-159889aa7272")
@@ -9346,7 +9837,7 @@
 			(uuid "aa4fbafb-b174-4016-bde5-e3dd5a8e15ee")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR037")
 					(unit 1)
@@ -9360,7 +9851,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3af0ac29-88f9-46f3-87c3-5877505d943c")
@@ -9412,7 +9903,7 @@
 			(uuid "f52eaa9c-ce49-4105-baad-8028bcea4638")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR014")
 					(unit 1)
@@ -9427,7 +9918,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d35308f-c79b-4e38-ad77-358e58aca8a5")
@@ -9479,7 +9970,7 @@
 			(uuid "32c9910e-6b03-4221-935f-cc345efc04e7")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR021")
 					(unit 1)
@@ -9547,9 +10038,75 @@
 			(uuid "dbfc5eea-a2b2-42a6-95d2-50c77a54b8dc")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 246.38 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43133a1c-2aa2-45f5-b5bf-fdcad797637b")
+		(property "Reference" "#PWR041"
+			(at 246.38 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 246.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 246.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75b38fe3-a4d0-4a3c-9644-e9dfe8c9fddb")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -9614,7 +10171,7 @@
 			(uuid "d38fc02b-1f2c-45f4-994d-6367bdccb187")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR010")
 					(unit 1)
@@ -9684,7 +10241,7 @@
 			(uuid "05663a95-bec6-4e9d-822a-2095e8605394")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R3")
 					(unit 1)
@@ -9699,7 +10256,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b79d187-320f-4a19-ace3-4bc9badf9936")
@@ -9751,7 +10308,7 @@
 			(uuid "185845a5-f0b2-4c12-90e6-7de292e298f3")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR019")
 					(unit 1)
@@ -9821,7 +10378,7 @@
 			(uuid "dc03eb3f-3ff1-49d6-a65c-3ab03202d1f3")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R5")
 					(unit 1)
@@ -9884,74 +10441,9 @@
 			)
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 186.69 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "54ca9e1d-1803-492d-b5a3-2c31f403a897")
-		(property "Reference" "#PWR013"
-			(at 186.69 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 190.5 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 186.69 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c1833ff4-41e7-4984-9efc-5091c4bede40")
-		)
-		(instances
-			(project "VGA4CPC_Brett_RevE"
-				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -9964,7 +10456,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55ad3fe0-547e-4e3c-a91b-06a511b1043e")
@@ -10016,7 +10508,7 @@
 			(uuid "6edbb3f1-339d-4e64-af70-6357e68a5d46")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR022")
 					(unit 1)
@@ -10026,7 +10518,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 223.52 90)
+		(at 175.26 228.6 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10034,7 +10526,7 @@
 		(dnp no)
 		(uuid "5b288fc3-4894-4b69-bc6e-95f319dd549f")
 		(property "Reference" "R8"
-			(at 175.006 214.63 90)
+			(at 175.006 219.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10042,8 +10534,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "75Ω"
-			(at 175.006 217.17 90)
+		(property "Value" "820Ω"
+			(at 175.006 222.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10052,7 +10544,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 223.52 0)
+			(at 175.26 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10061,7 +10553,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 223.52 0)
+			(at 175.26 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10070,7 +10562,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 223.52 0)
+			(at 175.26 228.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10085,7 +10577,7 @@
 			(uuid "fa78749e-4156-43be-a2d6-548708024684")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R8")
 					(unit 1)
@@ -10152,7 +10644,7 @@
 			(uuid "8e3ddf41-7cd5-46da-bc69-91d28281bb86")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR04")
 					(unit 1)
@@ -10167,7 +10659,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "624b791d-8e7d-4ae3-850b-de1cbb8d84c7")
@@ -10219,7 +10711,7 @@
 			(uuid "185845a5-f0b2-4c12-90e6-7de292e298f4")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR029")
 					(unit 1)
@@ -10233,7 +10725,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "627cbd76-da90-4819-841d-041cad59a83e")
@@ -10357,7 +10849,7 @@
 			(uuid "09bf0894-5097-4157-b040-24c9250506fe")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "U4")
 					(unit 1)
@@ -10372,7 +10864,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67ab5766-a6f4-4703-8027-27e35ed719a6")
@@ -10424,7 +10916,7 @@
 			(uuid "c30d3fef-9f69-47fa-8d4a-535afcd48cad")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR024")
 					(unit 1)
@@ -10509,7 +11001,7 @@
 			(uuid "38118986-1ad5-4ff8-935c-705737e395b5")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J5")
 					(unit 1)
@@ -10618,7 +11110,7 @@
 			(uuid "743580d7-d62b-4033-843c-3e667400a7f2")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J6")
 					(unit 1)
@@ -10632,7 +11124,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b3fbb04-6fd5-4d5b-bf90-0116686db35e")
@@ -10684,7 +11176,7 @@
 			(uuid "45114dfe-e30b-4ee6-a474-6b2ac4ea5616")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR036")
 					(unit 1)
@@ -10750,7 +11242,7 @@
 			(uuid "0f5a5398-5260-42c7-b9ee-a6ba454a4bbb")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR015")
 					(unit 1)
@@ -10764,7 +11256,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75cf1db6-c4c1-4f36-8e0c-841cc8bf2c4a")
@@ -10888,7 +11380,7 @@
 			(uuid "da000816-7504-4a18-852e-ff5bd949ec3d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "U5")
 					(unit 1)
@@ -10903,7 +11395,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "76b9aca2-fd6f-4da2-a44e-f67b6c056df0")
@@ -10955,7 +11447,7 @@
 			(uuid "9a016332-2168-4a2a-8027-037cb192ad30")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR030")
 					(unit 1)
@@ -10969,7 +11461,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77012d0c-bd18-45c0-b5b5-abe1fbda135f")
@@ -11024,7 +11516,7 @@
 			(uuid "ab0b25c9-d71d-4d8d-999a-9f80d974805d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C4")
 					(unit 1)
@@ -11038,7 +11530,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78b23cf2-25e8-4ed1-8082-8c69953cbb42")
@@ -11093,7 +11585,7 @@
 			(uuid "8945e498-fcfd-4ae4-8c3d-1a318891576d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C2")
 					(unit 1)
@@ -11107,7 +11599,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ca329ef-99fe-46cb-bd51-3b3bc598343c")
@@ -11163,7 +11655,7 @@
 			(uuid "da007790-acb8-4907-9822-0edb23b4674a")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R18")
 					(unit 1)
@@ -11245,7 +11737,7 @@
 			(uuid "1cbf5c24-5505-45e3-913a-4ec479181ea9")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J1")
 					(unit 1)
@@ -11255,7 +11747,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 228.6 90)
+		(at 175.26 223.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11263,7 +11755,7 @@
 		(dnp no)
 		(uuid "80196c6d-7b08-4b77-b48a-b08db17f6af8")
 		(property "Reference" "R10"
-			(at 175.006 224.028 90)
+			(at 175.006 218.948 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11271,8 +11763,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "150Ω"
-			(at 175.514 226.06 90)
+		(property "Value" "820Ω"
+			(at 175.514 220.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11281,7 +11773,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 228.6 0)
+			(at 175.26 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11290,7 +11782,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 228.6 0)
+			(at 175.26 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11299,7 +11791,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 228.6 0)
+			(at 175.26 223.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11314,139 +11806,9 @@
 			(uuid "6c473e1d-a5fa-4943-b475-5e6ce82eaea3")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 251.46 59.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8043dee5-66c4-44a1-84f3-9cf05c81e1d0")
-		(property "Reference" "#PWR038"
-			(at 251.46 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 255.27 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 251.46 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 251.46 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 251.46 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "94b6f667-9e7f-4b9b-93f4-d5dd21f8fd6a")
-		)
-		(instances
-			(project "VGA4CPC_Brett_RevE"
-				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
-					(reference "#PWR038")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 140.97 241.3 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "80aa71cb-2436-45be-a715-d852ef5fde25")
-		(property "Reference" "#PWR05"
-			(at 140.97 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 144.78 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 140.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 140.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 140.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f18ac80c-9070-4d76-a467-22f177f9034f")
-		)
-		(instances
-			(project "VGA4CPC_Brett_RevE"
-				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
-					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11507,7 +11869,7 @@
 			)
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "H4")
 					(unit 1)
@@ -11574,7 +11936,7 @@
 			(uuid "bc82adfe-0dd3-432d-ab3a-9d576c61bb9c")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR07")
 					(unit 1)
@@ -11641,7 +12003,7 @@
 			(uuid "378dbdbb-2c48-45a7-bb1a-cb4c19a3a9b8")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR01")
 					(unit 1)
@@ -11655,7 +12017,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8672d532-a841-49dd-8e15-63ed2c105a25")
@@ -11711,7 +12073,7 @@
 			(uuid "ce756eed-fcc2-4761-80c7-6abe84031648")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R20")
 					(unit 1)
@@ -11726,7 +12088,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8a261e25-7939-447a-a371-b5dcd909bd14")
@@ -11778,7 +12140,7 @@
 			(uuid "922ce0f9-526e-4203-92d6-0410cbf8de91")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR023")
 					(unit 1)
@@ -11845,74 +12207,9 @@
 			(uuid "112f0666-cf51-4742-85bb-5bec980277ac")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 160.02 207.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8ac260a5-4f2c-433b-88d8-4f4da9a8956d")
-		(property "Reference" "#PWR08"
-			(at 160.02 210.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 163.83 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 160.02 207.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "79957200-f9e0-44b9-b163-fcbf0ada09a2")
-		)
-		(instances
-			(project "VGA4CPC_Brett_RevE"
-				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
-					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -11977,7 +12274,7 @@
 			(uuid "d9b7dbbe-5f61-46f5-946c-39c95b475f0b")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C1")
 					(unit 1)
@@ -11991,7 +12288,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8fb5eef7-45cc-4bdf-9f14-f638e1b12494")
@@ -12047,7 +12344,7 @@
 			(uuid "b40cf179-d037-4b2c-9963-56b912c578e8")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R16")
 					(unit 1)
@@ -12115,7 +12412,7 @@
 			(uuid "837a0a00-e9bb-4a0f-86a8-bb3de0e3d178")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "SW1")
 					(unit 1)
@@ -12182,7 +12479,7 @@
 			(uuid "a3df424c-3f88-46d2-9d2a-1509aa25c0fb")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR02")
 					(unit 1)
@@ -12196,7 +12493,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "951e72f8-3ea7-449c-8ba4-e9699e4ab858")
@@ -12248,7 +12545,7 @@
 			(uuid "98aacd73-b270-4131-a230-d1bd54993615")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR026")
 					(unit 1)
@@ -12262,7 +12559,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96362f4a-5a3a-4762-a35b-0e99e5b74d82")
@@ -12317,7 +12614,7 @@
 			(uuid "f6b5519d-2367-44ae-92c5-ea130f826b26")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C5")
 					(unit 1)
@@ -12331,7 +12628,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97a45c9a-82c4-4661-b441-f4a492054bf8")
@@ -12387,7 +12684,7 @@
 			(uuid "52b7b580-794b-42ec-9de7-9e1088c1a00b")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R22")
 					(unit 1)
@@ -12475,7 +12772,7 @@
 			(uuid "8df42a48-b40c-4544-b4b2-9456ee87cf34")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J7")
 					(unit 1)
@@ -12485,7 +12782,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 231.14 90)
+		(at 175.26 226.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12493,7 +12790,7 @@
 		(dnp no)
 		(uuid "abed7f15-926f-4122-ae40-1cdf0d84ca6c")
 		(property "Reference" "R11"
-			(at 175.006 236.474 90)
+			(at 175.006 231.394 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12501,8 +12798,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "75Ω"
-			(at 175.006 233.934 90)
+		(property "Value" "820Ω"
+			(at 175.006 228.854 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12511,7 +12808,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 231.14 0)
+			(at 175.26 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12520,7 +12817,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 231.14 0)
+			(at 175.26 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12529,7 +12826,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 231.14 0)
+			(at 175.26 226.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12544,7 +12841,7 @@
 			(uuid "6efb2a9a-a498-46a2-9aec-599d9bec3b5e")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R11")
 					(unit 1)
@@ -12614,7 +12911,7 @@
 			(uuid "d676b3c9-b50b-4b19-baac-4505316edcdd")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R1")
 					(unit 1)
@@ -12629,7 +12926,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "adf3ff24-4d7d-469f-9393-bb504b1dd4de")
@@ -12681,7 +12978,7 @@
 			(uuid "185845a5-f0b2-4c12-90e6-7de292e298f5")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR032")
 					(unit 1)
@@ -12691,7 +12988,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 218.44 90)
+		(at 175.26 233.68 90)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12700,7 +12997,7 @@
 		(dnp no)
 		(uuid "af113554-2463-4f6b-8dd2-dbfde84735cf")
 		(property "Reference" "R6"
-			(at 175.768 213.36 90)
+			(at 175.768 228.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12708,8 +13005,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "150Ω"
-			(at 175.768 215.9 90)
+		(property "Value" "820Ω"
+			(at 175.768 231.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12718,7 +13015,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 218.44 0)
+			(at 175.26 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12727,7 +13024,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 218.44 0)
+			(at 175.26 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12736,7 +13033,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 218.44 0)
+			(at 175.26 233.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12751,7 +13048,7 @@
 			(uuid "3145cf8d-d051-4de8-8d18-9b678ffe1c73")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R6")
 					(unit 1)
@@ -12765,7 +13062,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b07f6a64-874a-4ca6-bb95-ca56a9fa96a8")
@@ -12821,7 +13118,7 @@
 			(uuid "5ba3b1cf-7cec-443d-a814-d6b07f25939c")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R15")
 					(unit 1)
@@ -12831,7 +13128,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 175.26 233.68 90)
+		(at 175.26 218.44 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12839,7 +13136,7 @@
 		(dnp no)
 		(uuid "b159b0fa-10c1-43cf-9bfc-78833b51650f")
 		(property "Reference" "R12"
-			(at 175.006 239.014 90)
+			(at 175.006 223.774 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12848,7 +13145,7 @@
 			)
 		)
 		(property "Value" "220Ω"
-			(at 175.006 236.474 90)
+			(at 175.006 221.234 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12857,7 +13154,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
-			(at 175.26 233.68 0)
+			(at 175.26 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12866,7 +13163,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 175.26 233.68 0)
+			(at 175.26 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12875,7 +13172,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 175.26 233.68 0)
+			(at 175.26 218.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12890,7 +13187,7 @@
 			(uuid "5baee32c-c719-4b30-8aa4-e3897306b442")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R12")
 					(unit 1)
@@ -12957,7 +13254,7 @@
 			(uuid "db0ea5ed-96c7-416a-8049-75ad0e3cad6c")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR016")
 					(unit 1)
@@ -13024,7 +13321,7 @@
 			(uuid "4c7aa218-6f20-4a19-8565-3334fe4edbca")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR017")
 					(unit 1)
@@ -13038,7 +13335,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb5a8fd3-d4ca-44cb-bea8-0fff7c6bf9bf")
@@ -13090,7 +13387,7 @@
 			(uuid "6c6feda0-7252-4473-963a-b66726a3684e")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR018")
 					(unit 1)
@@ -13104,7 +13401,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb99f052-269d-4f35-9eb7-94b6fb548cd0")
@@ -13156,7 +13453,7 @@
 			(uuid "aea3a26b-b3d6-4fb1-9612-523508193f3d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR027")
 					(unit 1)
@@ -13219,9 +13516,142 @@
 			)
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 251.46 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c18dfd90-0454-4e74-b175-839d42cd9bbe")
+		(property "Reference" "#PWR013"
+			(at 251.46 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 251.46 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.46 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 251.46 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 251.46 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50695968-4724-4773-945e-13eaea7ba00b")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_3")
+		(lib_id "power:GND")
+		(at 255.27 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c46cadd5-5b6f-4220-92a9-dd20f8c1935f")
+		(property "Reference" "#PWR043"
+			(at 255.27 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 255.27 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 255.27 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3db9a600-68b9-493e-a996-08d90e0e328b")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -13234,7 +13664,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4c7aa11-3c22-448e-88a8-1f6a74e074cb")
@@ -13286,7 +13716,7 @@
 			(uuid "9307280e-30e6-4ea1-9bb8-7ea30b8b843b")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR034")
 					(unit 1)
@@ -13356,7 +13786,7 @@
 			(uuid "0b363866-6523-45dd-8356-05f62a14660d")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J4")
 					(unit 1)
@@ -13370,7 +13800,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c822186c-64d2-422e-aa9a-3001fb24508d")
@@ -13426,7 +13856,7 @@
 			(uuid "a391ef12-54ed-4c9e-aa84-678a65c0efc3")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R14")
 					(unit 1)
@@ -13440,7 +13870,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfedeb4d-0c88-4852-a0a9-40e388e92a93")
@@ -13495,7 +13925,7 @@
 			(uuid "216c38ff-cdd0-4932-9f08-eeae2e14b1b4")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C6")
 					(unit 1)
@@ -13562,9 +13992,104 @@
 			(uuid "bf3753ba-0677-406c-9993-10d70171bfdd")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "VGA4CPC_Symbols:Comparator_Daughterboard")
+		(at 271.78 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6410c13-14b9-4402-8508-a29b5de5bae2")
+		(property "Reference" "U6"
+			(at 270.51 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Comparator Daughterboard"
+			(at 270.51 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "VGA4CPC_Footprints:Comparator Daughterboard"
+			(at 276.86 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "ab1e50ed-c5e2-4ffb-99d3-5b7525ce09c1")
+		)
+		(pin "4"
+			(uuid "61f80d7e-59a9-4af7-a53a-69787ff10ebe")
+		)
+		(pin "2"
+			(uuid "73584054-2786-4e95-8de9-ae8b1862e509")
+		)
+		(pin "1"
+			(uuid "23484c0a-5951-45eb-b3c0-f98530b51db3")
+		)
+		(pin "11"
+			(uuid "035b16fe-367b-4f8f-84a4-b7b9fc028dd7")
+		)
+		(pin "7"
+			(uuid "bc2d53d7-1708-408d-8904-669269334fcc")
+		)
+		(pin "8"
+			(uuid "a3115042-5041-4df7-894c-14e5c15b8440")
+		)
+		(pin "9"
+			(uuid "d8509f9e-74e4-4f46-a2fb-19dbd835a89c")
+		)
+		(pin "3"
+			(uuid "6a564f3c-7589-4bb7-9e49-d15e6da4320c")
+		)
+		(pin "5"
+			(uuid "316ca712-7102-43e4-abc7-4320ca62fe5a")
+		)
+		(pin "10"
+			(uuid "f0f99ca9-477a-4863-808c-3f12618e5fea")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -13628,9 +14153,75 @@
 			(uuid "5a95645f-6b19-448b-90bb-bed03fa31ca9")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 138.43 243.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d9920fb7-61cc-464c-aaee-f2e7a4ed514f")
+		(property "Reference" "#PWR05"
+			(at 138.43 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 138.43 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 138.43 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 138.43 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 138.43 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f597629b-3c2c-4dc1-89a1-393987b70e95")
+		)
+		(instances
+			(project "VGA4CPC_Brett_RevF"
+				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -13695,7 +14286,7 @@
 			(uuid "185845a5-f0b2-4c12-90e6-7de292e298f6")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR03")
 					(unit 1)
@@ -13709,7 +14300,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ddda2943-020e-4e3f-9d6b-f33b1631a8a4")
@@ -13764,7 +14355,7 @@
 			(uuid "af444296-2029-4804-b055-773a68f96770")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C8")
 					(unit 1)
@@ -13835,7 +14426,7 @@
 			(uuid "8cf4218f-e736-4814-9d1e-dbb26429f9a3")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "J8")
 					(unit 1)
@@ -13850,7 +14441,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ded2ac89-adae-4e42-96aa-c6f11d5cd93e")
@@ -13902,7 +14493,7 @@
 			(uuid "1c1dafa4-2801-42c0-8314-7970119e45a6")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR033")
 					(unit 1)
@@ -13917,7 +14508,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e5398d37-6c5e-469e-8e9d-5f2528eca0db")
@@ -13969,7 +14560,7 @@
 			(uuid "f4d11841-4d2d-42cf-b9b8-1169098a5313")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR031")
 					(unit 1)
@@ -13996,7 +14587,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LVC245"
+		(property "Value" "74HCT245"
 			(at 162.1633 213.36 0)
 			(effects
 				(font
@@ -14005,7 +14596,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 160.02 231.14 0)
 			(effects
 				(font
@@ -14093,7 +14684,7 @@
 			(uuid "925faf01-e39c-4159-92ab-c17c18a5edcb")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "U2")
 					(unit 1)
@@ -14156,7 +14747,7 @@
 			)
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "H1")
 					(unit 1)
@@ -14226,7 +14817,7 @@
 			(uuid "526d3732-4c5a-4201-b512-701c1bc3936b")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R2")
 					(unit 1)
@@ -14292,7 +14883,7 @@
 			(uuid "41daa536-78f2-4b43-87cd-348b2fb63e94")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR011")
 					(unit 1)
@@ -14306,7 +14897,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f70a0ad1-0574-4107-8fe5-03b161f6032e")
@@ -14362,7 +14953,7 @@
 			(uuid "cb0f2d54-13eb-4ee3-8a41-f66fbc2f5725")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "R17")
 					(unit 1)
@@ -14376,7 +14967,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "faf4ff4a-bd11-4ec9-9442-f33fb5b7030a")
@@ -14431,7 +15022,7 @@
 			(uuid "b2076b24-63f7-4c77-a8f0-963036adfd44")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "C3")
 					(unit 1)
@@ -14445,7 +15036,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fb1c913b-e32f-4975-8274-b4c17d495515")
@@ -14497,7 +15088,7 @@
 			(uuid "43e6785b-d51d-4fc6-837b-1fd67222ce97")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR028")
 					(unit 1)
@@ -14564,7 +15155,7 @@
 			(uuid "069a5e09-6342-491a-b973-0f82eb6e2be5")
 		)
 		(instances
-			(project "VGA4CPC_Brett_RevE"
+			(project "VGA4CPC_Brett_RevF"
 				(path "/76aeb8bf-9dcb-4607-9c24-0bb2d5cc0c91"
 					(reference "#PWR06")
 					(unit 1)

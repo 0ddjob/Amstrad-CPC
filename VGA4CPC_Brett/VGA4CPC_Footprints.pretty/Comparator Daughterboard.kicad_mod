@@ -55,8 +55,8 @@
 	)
 	(attr through_hole)
 	(fp_line
-		(start -11.54 3.7)
-		(end -10.16 3.7)
+		(start -21.045 3.7)
+		(end -19.665 3.7)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -65,8 +65,8 @@
 		(uuid "8b5600e2-f87b-4f96-8106-ba7e8a9b1580")
 	)
 	(fp_line
-		(start -11.54 5.08)
-		(end -11.54 3.7)
+		(start -21.045 5.08)
+		(end -21.045 3.7)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -75,8 +75,8 @@
 		(uuid "06c26464-824e-4194-8a98-6811056b5a56")
 	)
 	(fp_line
-		(start -11.54 6.35)
-		(end -11.54 16.62)
+		(start -21.045 6.35)
+		(end -21.045 16.62)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -85,8 +85,8 @@
 		(uuid "dbfd7e8c-b8b8-4278-8133-ce4c7c653a31")
 	)
 	(fp_line
-		(start -11.54 6.35)
-		(end -8.78 6.35)
+		(start -21.045 6.35)
+		(end -18.285 6.35)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -95,8 +95,8 @@
 		(uuid "8c189f6f-a483-42c2-89c7-965e5efbae23")
 	)
 	(fp_line
-		(start -11.54 16.62)
-		(end -8.78 16.62)
+		(start -21.045 16.62)
+		(end -18.285 16.62)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -105,8 +105,8 @@
 		(uuid "50e54615-1d63-4eed-93ff-802cc651f6f8")
 	)
 	(fp_line
-		(start -8.78 6.35)
-		(end -8.78 16.62)
+		(start -18.285 6.35)
+		(end -18.285 16.62)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -175,8 +175,8 @@
 		(uuid "05f0c3ee-0d40-439b-92bc-2ed430a7fafa")
 	)
 	(fp_rect
-		(start -11.93 3.31)
-		(end -8.39 17.01)
+		(start -21.435 3.31)
+		(end -17.895 17.01)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -197,8 +197,8 @@
 		(uuid "2b0e29aa-4276-4bac-923e-d0509c37e99d")
 	)
 	(fp_line
-		(start -11.43 4.445)
-		(end -10.795 3.81)
+		(start -20.935 4.445)
+		(end -20.3 3.81)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -207,8 +207,8 @@
 		(uuid "76f54df7-4513-4f3c-89b0-835ade5573bc")
 	)
 	(fp_line
-		(start -11.43 16.51)
-		(end -11.43 4.445)
+		(start -20.935 16.51)
+		(end -20.935 4.445)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -217,8 +217,8 @@
 		(uuid "88024dec-1094-42cf-954e-b0a3d80c6a04")
 	)
 	(fp_line
-		(start -10.795 3.81)
-		(end -8.89 3.81)
+		(start -20.3 3.81)
+		(end -18.395 3.81)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -227,8 +227,8 @@
 		(uuid "b401edff-3db7-4aa3-9b31-040ba40eb54e")
 	)
 	(fp_line
-		(start -8.89 3.81)
-		(end -8.89 16.51)
+		(start -18.395 3.81)
+		(end -18.395 16.51)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -237,8 +237,8 @@
 		(uuid "fc5028bc-c012-4ccd-963f-638801f2ef15")
 	)
 	(fp_line
-		(start -8.89 16.51)
-		(end -11.43 16.51)
+		(start -18.395 16.51)
+		(end -20.935 16.51)
 		(stroke
 			(width 0.1)
 			(type solid)
@@ -320,7 +320,7 @@
 		)
 	)
 	(fp_text user "${REFERENCE}"
-		(at -10.16 10.16 90)
+		(at -19.665 10.16 90)
 		(layer "F.Fab")
 		(uuid "d51b34cb-77a5-439e-b631-81f10d3e6fb4")
 		(effects
@@ -379,7 +379,7 @@
 		(uuid "067de2e5-791f-4a82-8031-fa99cfb66ab0")
 	)
 	(pad "7" thru_hole rect
-		(at -10.16 5.08)
+		(at -19.665 5.08)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -387,7 +387,7 @@
 		(uuid "60e3940c-3f01-4a80-91c3-6a55aa0ae5b4")
 	)
 	(pad "8" thru_hole circle
-		(at -10.16 7.62)
+		(at -19.665 7.62)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -395,7 +395,7 @@
 		(uuid "349cdf78-97e2-459a-ad07-47e0660f7828")
 	)
 	(pad "9" thru_hole circle
-		(at -10.16 10.16)
+		(at -19.665 10.16)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -403,7 +403,7 @@
 		(uuid "2c58106c-0a87-44be-be85-da33e8dd8387")
 	)
 	(pad "10" thru_hole circle
-		(at -10.16 12.7)
+		(at -19.665 12.7)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -411,7 +411,7 @@
 		(uuid "4dbe2931-846c-463c-8d78-37adab93276d")
 	)
 	(pad "11" thru_hole circle
-		(at -10.16 15.24)
+		(at -19.665 15.24)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
@@ -421,7 +421,7 @@
 	(embedded_fonts no)
 	(model "/Users/brett/Documents/GitHub/Amstrad-CPC/VGA4CPC_Brett/Comparator_Board.step"
 		(offset
-			(xyz -147.5 99 2.54)
+			(xyz -19.56 -5 2.54)
 		)
 		(scale
 			(xyz 1 1 1)

@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "VGA4CPC_Footprints")(type "KiCad")(uri "/Users/brett/Documents/GitHub/Amstrad-CPC/VGA4CPC_Brett/VGA4CPC_Footprints.pretty")(options "")(descr ""))
+)
