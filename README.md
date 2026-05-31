@@ -40,7 +40,7 @@ A modification of [grzegorz_gr's original design](https://github.com/grzegorz-gr
 
 ![Brett's CPC-only board 3D](/VGA4CPC_Brett/RevC/VGA4CPC_Brett_RevC_3D.png)
 
-![Brett's CPC-to-VGA board 3D](/VGA4CPC_Brett/RevD/VGA4CPC_Brett_RevD_3D.png)
+![Brett's CPC-to-VGA board 3D](/VGA4CPC_Brett/RevF/VGA4CPC_Brett_RevF_3D.png)
 
 ### Status
 22-May-2025: Rev. C pending fab & testing
