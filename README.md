@@ -51,3 +51,10 @@ This is just a very simple connector converter - convert the CPC/CPC PLUS DIN to
 The idea is that you can then more easily plug it into a device with a VGA socket (like GBS8200) for actual signal conversion.<br>
 
 ![CPC DIN to VGA converter 3D](/CPC_DIN-to-VGA/CPC_DIN-to-VGA_3D.png)
+
+## [Laserwarp](/Laserwarp)
+Laserwarp was the first game, with Map Rally, that we got with our green screen Amstrad CPC464 so I have fond memories.<br>
+
+![Laserwarp sprite](/Laserwarp/Sprites/sprite_67_65B7_16x16.png)
+
+I thought it might be interesting to try out Claude to disassemble and delve into how the game works.<br>
