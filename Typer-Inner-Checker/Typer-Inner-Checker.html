@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPC Locomotive BASIC — Line Checker</title>
+<style>
+  :root{
+    --paper:#0a0ac4; --ink:#ffe300; --kw:#ffffff; --fn:#7fffd4; --str:#3cff3c;
+    --num:#ff9f43; --com:#9aa7ff; --err:#ff5a5a; --warn:#ff9f43; --panel:#06067e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Cascadia Mono",Consolas,"Courier New",monospace;font-size:15px;line-height:1.45;padding:14px}
+  h1{font-size:20px;margin:0 0 2px}
+  .sub{color:#bcd; font-size:12px;margin:0 0 12px}
+  .editor{position:relative;height:240px;margin-top:4px}
+  #hl,#src{position:absolute;inset:0;margin:0;box-sizing:border-box;padding:10px;
+    border:2px solid #4a4ad0;border-radius:6px;
+    font-family:"Cascadia Mono",Consolas,"Courier New",monospace;font-size:14px;line-height:1.45;
+    white-space:pre-wrap;word-break:break-word}
+  #hl{background:#02024a;color:var(--ink);overflow:hidden;pointer-events:none;z-index:0}
+  #src{background:transparent;color:transparent;caret-color:var(--ink);overflow:auto;resize:none;z-index:1}
+  #src::selection{background:#5a5aff;color:transparent}
+  #src::placeholder{color:#7a7ad0}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}
+  button{background:#1d1de0;color:#fff;border:1px solid #6a6aff;border-radius:6px;padding:7px 14px;
+    font-family:inherit;font-size:14px;cursor:pointer}
+  button:hover{background:#3a3aff}
+  label{font-size:13px;color:#cde}
+  .summary{background:var(--panel);border:1px solid #4a4ad0;border-radius:6px;padding:8px 12px;margin:10px 0;font-size:13px}
+  .line{background:#05055e;border:1px solid #2a2ab0;border-left:5px solid #2a2ab0;border-radius:5px;
+    padding:7px 10px;margin:7px 0;white-space:pre-wrap;word-break:break-word}
+  .line.ok{border-left-color:#3cff3c}
+  .line.warn{border-left-color:var(--warn)}
+  .line.err{border-left-color:var(--err)}
+  .lno{color:#8fa; }
+  .kw{color:var(--kw);font-weight:bold}
+  .fn{color:var(--fn)}
+  .str{color:var(--str)}
+  .num{color:var(--num)}
+  .com{color:var(--com);font-style:italic}
+  .op{color:#ffd}
+  .var{color:var(--ink)}
+  .msgs{margin-top:4px;font-size:12.5px}
+  .msg-err{color:var(--err)}
+  .msg-warn{color:var(--warn)}
+  .msg-ok{color:#3cff3c}
+  .legend{font-size:12px;color:#cde;margin-top:14px}
+  .legend span{margin-right:14px}
+  code{background:#02024a;padding:1px 4px;border-radius:3px}
+  #fname{background:#02024a;color:var(--ink);border:1px solid #4a4ad0;border-radius:5px;
+    padding:6px 8px;font-family:inherit;font-size:13px;width:150px}
+  #listout{display:none;background:#02024a;border:2px solid #4a4ad0;border-radius:6px;
+    padding:10px 12px;margin:10px 0;white-space:pre-wrap;word-break:break-word}
+  .listhdr{color:#bcd;font-size:12px;margin-bottom:8px}
+  .listline{padding:1px 0}
+</style>
+</head>
+<body>
+<h1>Amstrad CPC Locomotive BASIC Checker v0.1 (26/Jun/2026)</h1>
+<p class="sub">Paste or type your listing below. This does <b>not run</b> the program — it checks each line the way a real CPC reacts when you press ENTER: it recognises the BASIC keywords and flags the common type-in mistakes. Recognised keywords light up; if a word you meant as a command stays plain, it didn't tokenise (likely a typo).</p>
+
+<div class="editor">
+  <pre id="hl" aria-hidden="true"></pre>
+  <textarea id="src" spellcheck="false" placeholder="10 MODE 1:INK 0,0:INK 1,26:BORDER 0&#10;20 LOCATE 2,2:PRINT&quot;HELLO&quot;&#10;30 FOR I=1 TO 10:PRINT I:NEXT I&#10;40 GOSUB 100&#10;50 END"></textarea>
+</div>
+<div class="row">
+  <button onclick="run()">Check listing</button>
+  <button onclick="doList()">LIST view</button>
+  <button onclick="doCaps()">CAPS keywords</button>
+  <button onclick="doSave()">Save .bas</button>
+  <button onclick="doLoad()">Load .bas</button>
+  <input type="file" id="floader" accept=".bas,.txt,.asc" style="display:none">
+  <input id="fname" value="LISTING.BAS" spellcheck="false" title="file name for Save">
+  <label><input type="checkbox" id="live" checked> check as I type</label>
+  <label><input type="checkbox" id="warnO" checked> warn on capital&nbsp;O / lowercase&nbsp;l (0/1 mix-ups)</label>
+</div>
+<div id="summary" class="summary" style="display:none"></div>
+<div id="listout"></div>
+<div id="out"></div>
+<div class="legend">
+  <span class="kw">KEYWORD</span><span class="fn">function</span><span class="str">"string"</span>
+  <span class="num">number</span><span class="op">operator</span><span class="com">comment/data</span>
+</div>
+
+<script>
+// ---- Locomotive BASIC vocabulary ----
+const KEYWORDS = `AFTER AUTO BORDER CALL CAT CHAIN CLEAR CLG CLOSEIN CLOSEOUT CLS CONT DATA DEF DEFINT
+DEFREAL DEFSTR DEG DELETE DIM DRAW DRAWR EDIT ELSE END ENT ENV ERASE ERROR EVERY FILL FOR FRAME GOSUB
+GOTO GRAPHICS IF INK INPUT KEY LET LINE LIST LOAD LOCATE MASK MEMORY MERGE MODE MOVE MOVER NEXT NEW ON
+ORIGIN OUT PAPER PEN PLOT PLOTR POKE PRINT RAD RANDOMIZE READ RELEASE REM RENUM RESTORE RESUME RETURN
+RUN SAVE SOUND SPEED STOP SYMBOL TAG TAGOFF TROFF TRON WAIT WEND WHILE WIDTH WINDOW WRITE ZONE DI EI
+CURSOR THEN ELSE TO STEP USING SWAP AND OR NOT XOR MOD ERL FN SPC TAB`.split(/\s+/);
+const FUNCS = `ABS ASC ATN CHR$ CINT COS CREAL DEC$ DERR EOF ERR EXP FIX FRE HEX$ HIMEM INKEY INKEY$ INP
+INSTR INT JOY LEFT$ LEN LOG LOG10 LOWER$ MAX MID$ MIN PEEK PI POS REMAIN RIGHT$ RND ROUND SGN SIN
+SPACE$ SQ SQR STR$ STRING$ TAN TEST TESTR TIME UNT UPPER$ VAL VPOS XPOS YPOS BIN$ COPYCHR$`.split(/\s+/);
+const KW = new Set(KEYWORDS.map(s=>s.toUpperCase()));
+const FN = new Set(FUNCS.map(s=>s.toUpperCase()));
+const ALL = new Set([...KW,...FN]);
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+// edit distance <=1 quick test
+function near(a,b){
+  if(a===b) return false;
+  if(Math.abs(a.length-b.length)>1) return false;
+  let i=0,j=0,edits=0;
+  while(i<a.length&&j<b.length){
+    if(a[i]===b[j]){i++;j++;continue;}
+    edits++; if(edits>1) return false;
+    if(a.length>b.length) i++;
+    else if(a.length<b.length) j++;
+    else {i++;j++;}
+  }
+  edits += (a.length-i)+(b.length-j);
+  return edits<=1;
+}
+
+// Tokenise one line body (no line number). Returns {html, opens, quotes, words[]}
+function tokenise(body,upper){
+  let html="", i=0, opens=0, closes=0, quotes=0;
+  const words=[];
+  let commentMode=false; // after REM/'/DATA -> rest is plain
+  while(i<body.length){
+    const c=body[i];
+    if(commentMode){ html+="<span class='com'>"+esc(body.slice(i))+"</span>"; break; }
+    if(c==='"'){ // string until next quote or EOL
+      quotes++;
+      let j=i+1; while(j<body.length && body[j]!=='"') j++;
+      const closed = body[j]==='"';
+      if(closed) quotes++;
+      html+="<span class='str'>"+esc(body.slice(i, closed? j+1 : j))+"</span>";
+      i = closed? j+1 : j;
+      continue;
+    }
+    if(c==="'"){ commentMode=true; html+="<span class='com'>"; html+="'"; i++;
+      html+=esc(body.slice(i)); html+="</span>"; break; }
+    if(/[A-Za-z]/.test(c)){
+      let j=i+1; while(j<body.length && /[A-Za-z0-9]/.test(body[j])) j++;
+      if(body[j]==='$'||body[j]==='%') j++;
+      const w=body.slice(i,j), up=w.toUpperCase();
+      if(KW.has(up)){
+        html+="<span class='kw'>"+esc(upper?up:w)+"</span>";
+        words.push({w,up,kind:'kw'});
+        if(up==="REM"||up==="DATA") commentMode=true;
+      } else if(FN.has(up)){
+        html+="<span class='fn'>"+esc(upper?up:w)+"</span>"; words.push({w,up,kind:'fn'});
+      } else if(up.length>2 && up.slice(0,2)==="FN"){
+        // user-defined function reference, e.g. FNR, FNP, FNS
+        html+="<span class='fn'>"+esc(upper?up:w)+"</span>"; words.push({w,up,kind:'fn'});
+      } else {
+        html+="<span class='var'>"+esc(w)+"</span>"; words.push({w,up,kind:'var'});
+      }
+      i=j; continue;
+    }
+    if(/[0-9]/.test(c) || (c==='&')){
+      let j=i+1; while(j<body.length && /[0-9A-Fa-f.&xX]/.test(body[j])) j++;
+      html+="<span class='num'>"+esc(body.slice(i,j))+"</span>"; i=j; continue;
+    }
+    if(c==='('){opens++;}
+    if(c===')'){closes++;}
+    if("+-*/^\\=<>".includes(c)){ html+="<span class='op'>"+esc(c)+"</span>"; i++; continue; }
+    html+=esc(c); i++;
+  }
+  return {html, opens, closes, quotes, words};
+}
+
+function checkLine(raw){
+  const msgs=[]; let level="ok";
+  const m = raw.match(/^\s*(\d+)\s?([\s\S]*)$/);
+  let lineNo=null, body=raw;
+  if(m){ lineNo=parseInt(m[1],10); body=m[2]; }
+  else { msgs.push(["warn","No line number — a program line must start with a number."]); level="warn"; }
+  const t=tokenise(body);
+  // bracket balance
+  if(t.opens!==t.closes){ msgs.push(["err",`Unbalanced brackets: ${t.opens} "(" vs ${t.closes} ")".`]); level="err"; }
+  // quote balance
+  if(t.quotes%2!==0){ msgs.push(["err","Odd number of quotes \" — a string isn't closed."]); level="err"; }
+  // keyword typo hint: a 'var' word that's near a keyword and length>=3
+  for(const wd of t.words){
+    if(wd.kind!=='var') continue;
+    if(wd.up.length<3) continue;
+    for(const k of ALL){
+      if(k.length>=3 && near(wd.up,k)){
+        msgs.push(["warn",`"${wd.w}" isn't a keyword — did you mean ${k}? (it won't tokenise as typed)`]);
+        if(level==="ok") level="warn";
+        break;
+      }
+    }
+  }
+  // O / l heuristics
+  if(document.getElementById('warnO').checked){
+    // capital O directly adjacent to a digit, or a lone capital O between operators (often should be 0)
+    if(/[0-9]O|O[0-9]/.test(body)) { msgs.push(["warn","Capital O next to a digit — did you mean zero 0?"]); if(level==="ok")level="warn"; }
+    if(/(^|[^A-Za-z$%])l[0-9]/.test(body)) { msgs.push(["warn","Lower-case l next to a digit — did you mean one 1?"]); if(level==="ok")level="warn"; }
+  }
+  if(msgs.length===0) msgs.push(["ok","Looks fine."]);
+  return {lineNo, html:t.html, msgs, level, words:t.words, body};
+}
+
+function run(){
+  const src=document.getElementById('src').value;
+  const lines=src.split(/\r?\n/);
+  const out=document.getElementById('out'); out.innerHTML="";
+  const nums=[]; const numSet=new Set(); const targets=[]; let forCount=0, nextCount=0;
+  const fnDef=new Set(), fnUse=new Set();
+  let prev=null, orderProblem=false, dupProblem=false;
+  let rendered=0;
+  for(const raw of lines){
+    if(raw.trim()==="") continue;
+    rendered++;
+    const r=checkLine(raw);
+    const div=document.createElement('div');
+    div.className="line "+r.level;
+    const lnoHtml = r.lineNo!=null ? "<span class='lno'>"+r.lineNo+"</span> " : "";
+    let msgHtml="<div class='msgs'>";
+    for(const [k,m] of r.msgs) msgHtml+=`<div class='msg-${k}'>${k==='err'?'✗':k==='warn'?'!':'✓'} ${esc(m)}</div>`;
+    msgHtml+="</div>";
+    div.innerHTML=lnoHtml+r.html+msgHtml;
+    out.appendChild(div);
+    // listing-wide collection
+    if(r.lineNo!=null){
+      if(numSet.has(r.lineNo)) dupProblem=true;
+      if(prev!=null && r.lineNo<=prev) orderProblem=true;
+      prev=r.lineNo; nums.push(r.lineNo); numSet.add(r.lineNo);
+    }
+    // jump targets from the *code* (ignore strings/comments by using stripped body)
+    const stripped = stripStringsAndComments(r.body);
+    let mm;
+    const jre=/\b(GOTO|GOSUB|THEN|RESTORE)\b\s*([0-9][0-9, ]*)/gi;
+    while((mm=jre.exec(stripped))){ mm[2].split(/[, ]+/).forEach(n=>{ if(n!=="") targets.push({n:parseInt(n,10),from:r.lineNo,kw:mm[1].toUpperCase()}); }); }
+    const onre=/\bON\b[^:]*?\b(GOTO|GOSUB)\b\s*([0-9][0-9, ]*)/gi;
+    while((mm=onre.exec(stripped))){ mm[2].split(/[, ]+/).forEach(n=>{ if(n!=="") targets.push({n:parseInt(n,10),from:r.lineNo,kw:'ON '+mm[1].toUpperCase()}); }); }
+    const defre=/\bDEF\s+FN\s*([A-Za-z][A-Za-z0-9]*)/gi;
+    while((mm=defre.exec(stripped))) fnDef.add(("FN"+mm[1]).toUpperCase());
+    const usere=/\bFN\s*([A-Za-z][A-Za-z0-9]*)/gi;
+    while((mm=usere.exec(stripped))) fnUse.add(("FN"+mm[1]).toUpperCase());
+    forCount += (stripped.match(/\bFOR\b/gi)||[]).length;
+    nextCount += (stripped.match(/\bNEXT\b/gi)||[]).length;
+  }
+  // summary
+  const s=document.getElementById('summary'); s.style.display="block";
+  let html=`<b>${rendered}</b> line(s) checked. `;
+  if(orderProblem) html+="<span style='color:var(--err)'>✗ line numbers are not strictly ascending. </span>";
+  if(dupProblem) html+="<span style='color:var(--err)'>✗ duplicate line number(s). </span>";
+  if(!orderProblem&&!dupProblem&&nums.length) html+="<span style='color:#3cff3c'>✓ line numbers ascend, no duplicates. </span>";
+  // missing jump targets
+  const missing=[...new Set(targets.filter(t=>!numSet.has(t.n)).map(t=>t.n))];
+  if(missing.length) html+=`<br><span style='color:var(--err)'>✗ jump target(s) with no matching line: ${missing.join(", ")}</span>`;
+  else if(targets.length) html+=`<br><span style='color:#3cff3c'>✓ all ${targets.length} GOTO/GOSUB/THEN/RESTORE targets exist.</span>`;
+  html+=`<br>FOR: <b>${forCount}</b> &nbsp; NEXT: <b>${nextCount}</b> ` + (forCount===nextCount?"<span style='color:#3cff3c'>✓ balanced</span>":"<span style='color:var(--warn)'>! counts differ (ok if some NEXT close multiple loops)</span>");
+  if(fnDef.size){
+    html+=`<br>Functions defined: <b>${[...fnDef].join(", ")}</b>.`;
+    const undef=[...fnUse].filter(f=>!fnDef.has(f));
+    if(undef.length) html+=` <span style='color:var(--warn)'>! called but never DEFined: ${undef.join(", ")} (typo, or the DEF line isn't typed yet)</span>`;
+    else html+=" <span style='color:#3cff3c'>✓ every FN call matches a DEF.</span>";
+  }
+  s.innerHTML=html;
+}
+
+function stripStringsAndComments(body){
+  let out="", i=0, comment=false;
+  while(i<body.length){
+    if(comment) break;
+    const c=body[i];
+    if(c==='"'){ let j=i+1; while(j<body.length&&body[j]!=='"')j++; i=(body[j]==='"')?j+1:j; out+=' '; continue; }
+    if(c==="'"){ break; }
+    // crude REM/DATA cut
+    out+=c; i++;
+  }
+  out = out.replace(/\bREM\b[\s\S]*$/i,"").replace(/\bDATA\b[\s\S]*$/i,"");
+  return out;
+}
+
+function doList(){
+  const src=document.getElementById('src').value;
+  const rows=[];
+  for(const raw of src.split(/\r?\n/)){
+    if(raw.trim()==="") continue;
+    const m=raw.match(/^\s*(\d+)\s?([\s\S]*)$/);
+    if(m) rows.push({no:parseInt(m[1],10), body:m[2]});
+    else rows.push({no:Infinity, body:raw});
+  }
+  rows.sort((a,b)=>a.no-b.no);
+  let html="";
+  for(const r of rows){
+    const t=tokenise(r.body,true);
+    const lno = r.no===Infinity? "" : "<span class='lno'>"+r.no+"</span> ";
+    html+="<div class='listline'>"+lno+t.html+"</div>";
+  }
+  const lo=document.getElementById('listout');
+  lo.style.display="block";
+  lo.innerHTML="<div class='listhdr'>LIST &mdash; sorted by line number, keywords shown as the CPC stores them (UPPER CASE):</div>"+html;
+}
+
+// uppercase recognised keywords/functions in one line body, leaving strings,
+// comments and variable names alone (plain text, no HTML)
+function upperKeywords(body){
+  let out="", i=0, comment=false;
+  while(i<body.length){
+    if(comment){ out+=body.slice(i); break; }
+    const c=body[i];
+    if(c==='"'){ let j=i+1; while(j<body.length&&body[j]!=='"')j++; const cl=body[j]==='"';
+      out+=body.slice(i, cl?j+1:j); i=cl?j+1:j; continue; }
+    if(c==="'"){ out+=body.slice(i); break; }
+    if(/[A-Za-z]/.test(c)){
+      let j=i+1; while(j<body.length&&/[A-Za-z0-9]/.test(body[j]))j++;
+      if(body[j]==='$'||body[j]==='%')j++;
+      const w=body.slice(i,j), up=w.toUpperCase();
+      if(KW.has(up)||FN.has(up)||(up.length>2&&up.slice(0,2)==="FN")){
+        out+=up; if(up==="REM"||up==="DATA") comment=true;
+      } else out+=w;
+      i=j; continue;
+    }
+    if(c==='?'){ out+="PRINT"; const nx=body[i+1]; if(nx!==undefined && nx!==' ' && nx!==':') out+=" "; i++; continue; }   // ? -> PRINT, with a space before its argument
+    out+=c; i++;
+  }
+  return out;
+}
+
+function doCaps(){
+  const ta=document.getElementById('src');
+  ta.value=ta.value.split("\n").map(line=>{
+    const m=line.match(/^(\s*\d+\s?)([\s\S]*)$/);
+    return m ? m[1]+upperKeywords(m[2]) : upperKeywords(line);
+  }).join("\n");
+  paint(); persist(); run();
+}
+
+async function doSave(){
+  let name=(document.getElementById('fname').value||"LISTING.BAS").trim();
+  if(!/\./.test(name)) name+=".BAS";
+  document.getElementById('fname').value=name; persist();
+  let txt=document.getElementById('src').value.replace(/\r?\n/g,"\r\n");
+  if(txt.length && !txt.endsWith("\r\n")) txt+="\r\n";
+  // Native Save dialog with folder navigation — works when the page is served over http(s).
+  // Browsers block this on file:// pages, so it falls through to a normal download there.
+  if(window.showSaveFilePicker){
+    try{
+      const handle=await window.showSaveFilePicker({
+        suggestedName: name,
+        types:[{description:"BASIC listing", accept:{"text/plain":[".bas",".txt",".asc"]}}]
+      });
+      const w=await handle.createWritable();
+      await w.write(txt); await w.close();
+      document.getElementById('fname').value=handle.name; persist();
+      return;
+    }catch(e){ if(e && e.name==="AbortError") return; /* else fall through */ }
+  }
+  // Plain download. If your browser's "ask where to save each file" setting is on,
+  // this itself shows a Save-As dialog where you can pick the folder.
+  const blob=new Blob([txt],{type:"text/plain"});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download=name;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},150);
+}
+
+// ---- syntax-highlight layer behind the (transparent) textarea ----
+function highlightAll(text){
+  return text.split("\n").map(line=>{
+    const m=line.match(/^(\s*)(\d+)(\s?)([\s\S]*)$/);
+    if(m) return esc(m[1])+"<span class='lno'>"+m[2]+"</span>"+esc(m[3])+tokenise(m[4],false).html;
+    return tokenise(line,false).html;
+  }).join("\n");
+}
+function paint(){
+  document.getElementById('hl').innerHTML=highlightAll(document.getElementById('src').value)+"\n";
+}
+function syncScroll(){
+  const s=document.getElementById('src'), h=document.getElementById('hl');
+  h.scrollTop=s.scrollTop; h.scrollLeft=s.scrollLeft;
+}
+
+function doLoad(){ document.getElementById('floader').click(); }
+document.getElementById('floader').addEventListener('change',function(e){
+  const f=e.target.files[0]; if(!f) return;
+  const rd=new FileReader();
+  rd.onload=function(){
+    document.getElementById('src').value=String(rd.result).replace(/\r\n/g,"\n").replace(/\r/g,"\n");
+    document.getElementById('fname').value=f.name;
+    paint(); persist(); run();
+  };
+  rd.readAsText(f);
+  e.target.value="";
+});
+function persist(){
+  try{
+    localStorage.setItem('cpc_listing',document.getElementById('src').value);
+    localStorage.setItem('cpc_fname',document.getElementById('fname').value);
+  }catch(_){}
+}
+document.getElementById('src').addEventListener('input',()=>{ paint(); persist(); if(document.getElementById('live').checked) run(); });
+document.getElementById('src').addEventListener('scroll',syncScroll);
+document.getElementById('fname').addEventListener('input',persist);
+window.onload=function(){
+  try{
+    const s=localStorage.getItem('cpc_listing'); if(s!==null && s!=="") document.getElementById('src').value=s;
+    const fn=localStorage.getItem('cpc_fname'); if(fn) document.getElementById('fname').value=fn;
+  }catch(_){}
+  paint(); run();
+};
+</script>
+</body>
+</html>
