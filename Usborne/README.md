@@ -17,3 +17,15 @@ The tweaks include:
 - removed the extra comma on the EXITS output (i.e. N,S,W instead of N,S,W,)
 - added in the save/load/quit subroutines
 
+## [Write Your Own Fantasy Games](/Usborne/Write_Your_Own_Fantasy_Games)
+A work in progress: currently the dungeon designer is working.  The original game had three separate listings: the dungeon designer, the character creator and then the main game itself.<br>
+
+There will be two versions of each:
+- DUNGEON1.BAS: the straight conversion of the dungeon designer
+- DUNGEON2.BAS: my tweaked/improved version
+- CHARACTER1.BAS: the straight conversion of the character creator
+- CHARACTER2.BAS: the tweaked version
+- GAME1.BAS: the straight conversion of the main game
+- GAME2.BAS: the tweaked version
+
+![Dungeon of Doom level designer](/Usborne/Write_Your_Own_Fantasy_Games/DungeonOfDoom_DungeonDesigner.png)
