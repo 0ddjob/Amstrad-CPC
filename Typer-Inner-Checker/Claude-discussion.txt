@@ -1,0 +1,321 @@
+[Last Update: Sat 27/JUN/2026]
+
+Brett: 
+Would it be possible to create a simple Amstrad CPC Locomotive BASIC
+emulator just for typing in a listing?  I don't need it to actually run the
+program but to check each line as I typed it in to make sure it looked correct?
+
+Claude: 
+Absolutely — that's a great idea and a perfect thing for me to build
+from scratch (it's my own tool, no copyright worries). A "type-in checker" that
+mirrors what a real CPC does when you enter a line: recognise the Locomotive
+BASIC keywords, flag the classic typing mistakes (unbalanced brackets/quotes, a
+misspelt keyword that won't tokenise, missing line number), and — across the
+whole listing — check that every `GOSUB`/`GOTO` target actually exists and the
+line numbers ascend.
+
+Let me build it as a self-contained HTML page you can keep open in a browser
+beside your typing.Let me test the checker's core logic with node before sharing
+it, to make sure the keyword recognition and the error checks behave
+correctly.The per-line checks all behave correctly. Let me verify the whole-
+listing jump-target check logic too.The whole-listing checks work too — it found
+the missing `999` target and correctly ignored a `GOSUB 777` that appeared
+inside a string. The tool's logic is all verified.Open `CPC BASIC Line
+Checker.html` in any browser (double-click it — no internet needed). Paste or
+type your lines and it checks them live, the way a real CPC reacts on ENTER:
+
+- **Recognised keywords light up** — if a word you meant as a command stays
+plain, it didn't tokenise (a typo like `PRNT`). It even suggests the likely
+keyword. - **Flags the classic mistakes**: unbalanced `()`, an unclosed
+`"string`, a missing line number, and (optional) capital-`O`/lowercase-`l` next
+to digits — exactly the `O`/`0`, `I`/`1` traps the book warns about. - **Whole-
+listing summary**: line numbers ascend with no duplicates, every
+`GOTO`/`GOSUB`/`THEN`/`RESTORE` target exists (strings ignored, so a number
+inside a `"..."` won't fool it), and a `FOR`/`NEXT` count.
+
+It only checks how a line *looks* — it doesn't run anything — which is exactly
+what you wanted for proofreading as you type. Tested the keyword recognition,
+the bracket/quote/typo flags, and the jump-target checker, and they all behave.
+
+If you'd like, I can extend it — e.g. a side-by-side "as the CPC would LIST it"
+canonical view, or a check tuned to the book's data-line rule (groups of four
+`0`/`1`s). Just say the word.
+
+Brett:
+Yes, could you add a LIST and a SAVE button?
+
+Claude:
+Good idea — both are easy and useful (and a saved `.bas` from here is
+exactly the ASCII format I can drop onto a `.dsk` later). Let me add them.Now
+add the `doList` and `doSave` functions.Let me verify the new LIST
+canonicalisation and Save logic work.Both work correctly. The LIST view
+canonicalises keywords to upper case (`print`→`PRINT`, `goto`→`GOTO`,
+`mid$`→`MID$`) while leaving variable names and string contents untouched — and
+it sorts by line number.
+
+The checker now has:
+
+- **Check listing** — live per-line + whole-listing validation (as before). -
+**LIST view** — shows the program sorted by line number with keywords rendered
+the way the CPC stores them (upper case), so you can compare against what you'd
+see after `LIST` on the real machine. - **Save .bas** — downloads your typed
+listing as an ASCII `.bas` file (CRLF line endings) using the filename box.
+That's exactly the format I can later drop straight onto a `.dsk` for you.
+
+Open the HTML again to pick up the new buttons. When you've got a chunk of
+Island of Secrets typed in and saved, send me the `.bas` and I'll build and
+verify a disk image for it.
+
+Brett:
+how can we handle the use of FN, like "d=FNR(80)"
+
+Claude: 
+Good catch — `FNR` is a user-defined function (`DEF FNR(Z)=...`), and
+right now the checker treats `FNR` as an unknown variable and might even
+"helpfully" suggest you meant `FOR`. On a real CPC, **any identifier starting
+with `FN` is a function reference** (you can't have a normal variable starting
+`FN`), so I'll teach the checker that. I'll also make it track your `DEF FN`
+definitions and warn if you *call* an `FN` that was never defined (a great way
+to catch a mistyped function name like `FNR` vs `FNP`).Now the `DEF FN` tracking
+in the whole-listing check.Let me verify the FN handling with tests.The key fix
+works — `D=FNR(80)` is now OK and `FNR`/`FNP` are recognised as functions. The
+error was just my test harness scoping; let me confirm the def/use collection
+with a full eval.All verified. The checker now understands user-defined
+functions.
+
+To answer your question directly — on the CPC, any name beginning with `FN` is a
+function reference (you can't make an ordinary variable that starts `FN`), so
+the checker now treats `FNR`, `FNP`, `FNS`, etc. as functions rather than
+unknown variables. So:
+
+- `D=FNR(80)` now reads clean — `FNR` lights up as a function and won't get a
+bogus "did you mean FOR?" warning. - It scans your `DEF FN…` lines, lists which
+functions you've defined, and flags any `FN` you *call* but never `DEF`ined —
+e.g. defining `FNR`/`FNP` but typing `Y=FNS(Z)` reports `FNS` as called-but-
+undefined. That catches mistyped function names, with a note that it's also
+normal if you just haven't typed the `DEF` line yet.
+
+Reopen the HTML to pick up the change. That's a useful safety net for Island of
+Secrets specifically, since it leans on `FNR`, `FNP` and `FNS` throughout.
+
+Brett:
+A few more things: [1] the d=FNr(80) is now capitalised but the other keywords
+aren't in the type-in box [2] When saving it should ask for a filename
+
+Claude:
+Both good — these are my own tool, so easy to adjust.
+
+For [1]: the type-in box is a plain text area, so it shows exactly what you
+typed (you'd typed `FNR` in caps and the others lower-case). I'll add a **CAPS
+keywords** button that rewrites the box so every recognised keyword (and FN
+function) goes upper-case — the way a real CPC tidies a line — leaving your
+variable names, strings and comments untouched.
+
+For [2]: I'll make **Save** pop up a prompt for the filename.Now the `doCaps`
+logic and the prompt-on-save.Let me verify the CAPS-keywords logic does the
+right thing (keywords up, strings/comments/variables untouched).Both work
+perfectly:
+
+- **CAPS keywords** uppercases keywords/functions everywhere — `d=FNr(80)` →
+`d=FNR(80)`, `print`→`PRINT`, `goto`→`GOTO`, `mid$`→`MID$` — while leaving your
+variable names (`e$`, `i`, `c$`, `x`), string contents (the `goto` *inside* the
+quotes stays put), and `REM`/`'` comment text exactly as typed. Line numbers are
+preserved. - **Save** now pops up a prompt for the filename (defaulting to the
+box value), auto-adds `.BAS` if you don't, and remembers it.
+
+Reopen the HTML to get the new **CAPS keywords** button (next to LIST view) and
+the save prompt.
+
+So your workflow can be: type a chunk however you like → **CAPS keywords** to
+tidy it the CPC way → **Check listing** to catch slips → **Save .bas** (it'll
+ask the name) → **Load .bas** next session to carry on.
+
+
+Brett: 
+No, it still just offers Downloads folder.  Also the colouring of the
+keywords no longer works
+
+Claude:
+Two things to sort — let me look at the current file to find what broke
+the colouring.The tokeniser is fine. Let me read the rest of the script to find
+what broke the colouring.The `run()` rendering is intact (line 210 still inserts
+the coloured `r.html`). Let me check the CSS block — that's the likeliest place
+the colouring broke.The CSS is fully intact, so the styling isn't the problem.
+Let me actually execute `run()` in node with a DOM stub that captures the
+produced HTML, to see if it's throwing or producing the wrong output.The
+colouring logic is verifiably correct — `run()` produces `<span
+class='kw'>MODE</span>` etc. and the CSS for those classes is intact, so the
+keyword colours render in the **results panel below the box** (the type-in box
+itself is plain text and can't be coloured). Let me quickly confirm the HTML
+body markup isn't malformed from my edits, then fix the Save.The markup is clean
+and the colouring is genuinely working in this file — so your browser is almost
+certainly showing a **cached older copy**. More on that below. First, the Save
+fix.
+
+For a page opened from a local file (`file://`), the browser blocks the folder-
+picker API for security, which is why it silently falls back to a plain download
+into Downloads — there's no way around that limitation from within the page
+itself. But there's a reliable fix at the browser level. Let me streamline the
+Save so it works cleanly with it (and drop the now-redundant filename prompt,
+which would otherwise double up with the browser's own dialog).Let me confirm
+the script still parses cleanly.Both sorted. Summary:
+
+**Colouring** — I verified it's genuinely working in the saved file: `run()`
+produces `<span class='kw'>…</span>` tokens and the CSS for them is intact, so
+keywords colour correctly. Two things to note: - The colour appears in the
+**results panel below** the type-in box, not in the box itself (a plain textarea
+can't be coloured). - If that panel isn't colouring, your browser is showing a
+**cached old copy**. Fully close the tab and reopen the file (or hard-reload
+with Ctrl/Cmd+Shift+R). That'll load the current version.
+
+**Save to a chosen folder** — this is a browser security rule, not something the
+page can override: a page opened from a local file (`file://`) is blocked from
+the folder-picker, so it falls back to a plain download into Downloads. The
+reliable fix is a one-time browser setting:
+
+- **Chrome/Edge:** Settings → Downloads → turn on **"Ask where to save each file
+before downloading."**
+
+With that on, the Save button's download pops a proper **Save As** dialog where
+you can navigate to your `Island Of Secrets` folder and name the file. (I also
+removed the old filename prompt so you don't now get two dialogs — set the name
+in the filename box, or in the Save-As dialog itself.) If you ever serve the
+page over `http://` instead of opening it from disk, the native folder picker
+works directly — but the browser setting is the simplest route.
+
+Reopen the file fresh and both should behave.
+
+Brett:
+I opened it in Chrome and the keywords aren't coloured in the type-in
+box.  Save As is now working though.
+
+Claude:
+Ah — now I understand exactly. The colouring *is* working (you can see
+it in the LIST panel at the bottom of your screenshot), but you want it **in the
+type-in box itself** as you type. A plain `<textarea>` can't show colour, so
+I'll use the standard trick: a syntax-highlighted layer sitting exactly behind a
+transparent textarea, so you type into what looks like coloured code. Glad Save
+As is sorted now.
+
+Let me rebuild the editor as that overlay.Now the JavaScript — add the highlight
+painter, scroll sync, and call it on every change.Now make `doCaps` repaint too,
+then verify it all parses.The highlight layer works perfectly — `highlightAll`
+produces correctly classified tokens (`[kw:REM]`, `[fn:FNR]`, `[num:80]`,
+`[str:"HI"]`, `[com: ISLAND OF SECRETS]`), the editor overlay markup and
+transparent-textarea CSS are in place, and `paint()` is wired into typing, CAPS,
+Load and page-load.
+
+So now the **type-in box itself shows coloured keywords as you type** — there's
+a syntax-highlighted layer sitting exactly behind a see-through textarea, so
+your caret and editing work normally but the text appears coloured (keywords
+white/bold, functions cyan, numbers orange, strings green, comments blue, line
+numbers green). The results panel and LIST view below still work as before.
+
+Close the tab and reopen the file fresh (to avoid the cached copy), and you
+should see your listing light up right in the editor. One small caveat of this
+technique: on a *very* long wrapped line the coloured layer can drift a pixel or
+two from the caret while scrolling sideways — harmless, but let me know if it
+bothers you and I can switch the editor to no-wrap with a horizontal scroll
+instead.
+
+Brett: 
+One more ask - convert ? to PRINT
+
+Claude:
+Works correctly — `?` becomes `PRINT` everywhere in code (`?"hello"` →
+`PRINT"hello"`, `:?x` → `:PRINTx`), while a `?` inside a `"string"`, a `REM`, or
+a `DATA` line is left untouched.
+
+So now **CAPS keywords** does the full tidy a real CPC applies:
+keywords/functions up-cased and `?` expanded to `PRINT`. Reopen the file fresh
+and give it a go.
+
+(Note it produces `PRINTx`/`PRINTFNR(80)` with no space, exactly as the CPC
+stores it — the `?` carried no space, so none is added. Works fine; just looks
+tight.)
+
+Brett:
+I think we should always add a space, so ?"xxxx" should become PRINT
+"xxxx", like all other keywords
+
+Claude:
+Good point — that keeps PRINT looking like every other keyword. I'll add
+a space after the expanded `PRINT`, but only before an argument (not before a
+`:` separator, and not if a space is already there, so no doubles).Spot on:
+
+- `?"xxxx"` → `PRINT "xxxx"` ✓ - `? "xxxx"` → `PRINT "xxxx"` (no double space) ✓
+- `:?x` → `:PRINT x`, `?fnr(80)` → `PRINT FNR(80)` ✓ - `?:rem…` → `PRINT:REM…`
+(no odd space before the `:`) ✓ - a bare `?` at the end → `PRINT`, and a `?`
+inside a string stays put ✓
+
+Reopen the file fresh and **CAPS keywords** will now expand `?` to `PRINT` with
+a tidy space before the argument, consistent with the other keywords.
+
+Brett:
+I have made some small changes - please use the file called "Typer-Inner-
+Checker.html" from now-on and preserve any changes I make.
+
+Another small change.
+
+I noticed with FN that it capitalises also the function name, like "fnr" becomes
+"FNR" rather than "FNr" ... a real CPC will conver to "FNr"
+
+Claude: Got it — I'll switch to **Typer-Inner-Checker.html** and preserve your
+edits. Let me find it and read the relevant bits so I apply the FN fix to your
+current version, not my old copy.I'll apply the FN-name-case fix to your `Typer-
+Inner-Checker.html` — uppercasing only the `FN` keyword and preserving the
+function name's typed case (`fnr` → `FNr`), in both the LIST/highlight view and
+the CAPS function.Done, applied to **Typer-Inner-Checker.html** (your version).
+The `FN` keyword now upper-cases while the function name keeps its typed case —
+exactly like a real CPC:
+
+- `fnr(80)` → `FNr(80)`, `fnP(z)` → `FNP(z)`, `def fnr…` → `DEF FNr…` - And it
+composes correctly with the other tidying: `y=fnS(z):?x` → `y=FNS(z):PRINT x`
+
+This affects both the LIST view / live highlight and the **CAPS keywords**
+button. Built-in keywords and functions still fully upper-case; only the user
+`FN…` names preserve their case. Reopen the file fresh to pick it up.
+
+From now on I'll work from `Typer-Inner-Checker.html` and keep any edits you
+make to it.
+
+Brett: 
+This should be an error?
+
+150 PRINT ;PRINT "WHAT WILL YOU DO"; ✓ Looks fine.
+
+It should be
+
+PRINT:PRINT"xxxxx"
+
+?
+
+Claude:
+Good catch — that's a real bug in the checker. `PRINT ;PRINT "…"` is
+invalid on the CPC (two `PRINT` statements with a `;` between them instead of a
+`:` — the classic `:`/`;` slip the book warns about), and it should be flagged.
+Right now my checker only does bracket/quote/keyword checks, so it misses it.
+Let me add a check for a statement keyword (or `?`) appearing right after `;` or
+`,`, which almost always means a `:` was intended.
+
+Let me find the right spots in your `Typer-Inner-Checker.html`.I'll add the
+statement-set definition and the new check, in your `Typer-Inner-
+Checker.html`.Let me verify the new check flags the bad line but not valid
+ones.The new check works exactly right — flags `PRINT ;PRINT`, `;GOTO`,
+`,GOSUB`, `;?` as errors, while leaving all the valid `;`/`,` uses alone
+(variables, `CHR$`/`TAB`, `FNR`, `INPUT"…";N$`, `DATA`). The "PARSE ERR" was
+just my test stub, not the file. Let me confirm the file itself parses cleanly
+in a proper environment.The whole file parses cleanly. Done — added to your
+`Typer-Inner-Checker.html`.
+
+So now the checker flags that case: `150 PRINT ;PRINT "WHAT WILL YOU DO";`
+reports
+
+> ✗ ';' before a new statement (PRINT) — did you mean ':' ? e.g. PRINT:PRINT
+
+It triggers whenever a statement keyword (or `?`) sits right after a `;` or `,`,
+which is almost always a `:`/`;` slip. And it stays quiet for all the legitimate
+uses — `PRINT A;B;C`, `CHR$(7);TAB(5)`, `INPUT"NAME";N$`, `D;FNR(5)`, numeric
+lists like `SOUND 1,100,20`, and anything inside strings or `DATA`. Reopen the
+file fresh to pick it up.
+
