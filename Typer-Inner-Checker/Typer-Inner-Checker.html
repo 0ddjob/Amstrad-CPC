@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CPC Locomotive BASIC — Line Checker</title>
+<title>LocoBASIC Checker</title>
 <style>
   :root{
     --paper:#0a0ac4; --ink:#ffe300; --kw:#ffffff; --fn:#7fffd4; --str:#3cff3c;
@@ -69,8 +69,8 @@
   <button onclick="run()">Check listing</button>
   <button onclick="doList()">LIST view</button>
   <button onclick="doCaps()">CAPS keywords</button>
-  <button onclick="doSave()">Save .bas</button>
-  <button onclick="doLoad()">Load .bas</button>
+  <button onclick="doSave()">Save .BAS</button>
+  <button onclick="doLoad()">Load .BAS</button>
   <input type="file" id="floader" accept=".bas,.txt,.asc" style="display:none">
   <input id="fname" value="LISTING.BAS" spellcheck="false" title="file name for Save">
   <label><input type="checkbox" id="live" checked> check as I type</label>
@@ -147,8 +147,8 @@ function tokenise(body,upper){
       } else if(FN.has(up)){
         html+="<span class='fn'>"+esc(upper?up:w)+"</span>"; words.push({w,up,kind:'fn'});
       } else if(up.length>2 && up.slice(0,2)==="FN"){
-        // user-defined function reference, e.g. FNR, FNP, FNS
-        html+="<span class='fn'>"+esc(upper?up:w)+"</span>"; words.push({w,up,kind:'fn'});
+        // user-defined function: FN is the keyword (upper-cased), the name keeps its typed case
+        html+="<span class='fn'>"+esc(upper?("FN"+w.slice(2)):w)+"</span>"; words.push({w,up,kind:'fn'});
       } else {
         html+="<span class='var'>"+esc(w)+"</span>"; words.push({w,up,kind:'var'});
       }
@@ -308,7 +308,9 @@ function upperKeywords(body){
       let j=i+1; while(j<body.length&&/[A-Za-z0-9]/.test(body[j]))j++;
       if(body[j]==='$'||body[j]==='%')j++;
       const w=body.slice(i,j), up=w.toUpperCase();
-      if(KW.has(up)||FN.has(up)||(up.length>2&&up.slice(0,2)==="FN")){
+      if(up.length>2 && up.slice(0,2)==="FN" && !FN.has(up)){
+        out+="FN"+w.slice(2);                 // FN keyword upper-cased, function name kept as typed
+      } else if(KW.has(up)||FN.has(up)){
         out+=up; if(up==="REM"||up==="DATA") comment=true;
       } else out+=w;
       i=j; continue;
