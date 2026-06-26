@@ -1,6 +1,15 @@
 # Amstrad CPC
 Amstrad CPC related projects.
 
+## [Typer-Inner-Checker](/Typer-Inner-Checker)
+A simple HTML/web page to aid typing in Locomotive BASIC program listings on a modern computer.  It doesn't run the program, that's for a proper emulator.<br>
+
+This HTML page will:
+- Check each line as you type it in
+- Colourise/capitalise keywords
+- Highlights missing GOTO/GOSUB targets
+- Save/load BAS file for resuming where you left off
+
 ## [CPC PLUS Floppy Adaptor](/CPC_Plus_Floppy_Adaptor)
 An idea to convert the 6128 PLUS model's Centronics floppy connector to a more standard 26-way or 34-way pin header to connect a drive via a ribbon cable.<br>
 
