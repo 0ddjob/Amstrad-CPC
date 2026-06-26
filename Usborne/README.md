@@ -5,6 +5,8 @@ It included a listing of an example adventure game, HAUNTED HOUSE, in Microsoft 
 
 I never really got the program working (I was very young and stupid) so I finally decided to rectify that by using Claude to generate a CPC version in a DSK file, and then made some minor tweaks of my own (like using UPPER$ function to accept either upper or lower case commands).<br>
 
+Usborne have very graciously made high-quality PDFs available for free download [here](https://usborne.com/au/books/computer-and-coding-books).
+
 ## [Write Your Own Adventure Programs](/Usborne/Write_Your_Own_Adventure_Programs)
 My first attempt - it seems to work quite well (thanks Claude).<br>
 
@@ -16,6 +18,7 @@ The tweaks include:
 - using UPPER$ function so you don't need to SHOUT commands :)
 - removed the extra comma on the EXITS output (i.e. N,S,W instead of N,S,W,)
 - added in the save/load/quit subroutines
+
 
 ## [Write Your Own Fantasy Games](/Usborne/Write_Your_Own_Fantasy_Games)
 The original game had three separate listings: the dungeon designer, the character creator and then the main game itself.<br>
