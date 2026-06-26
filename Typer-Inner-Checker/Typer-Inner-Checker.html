@@ -98,6 +98,9 @@ SPACE$ SQ SQR STR$ STRING$ TAN TEST TESTR TIME UNT UPPER$ VAL VPOS XPOS YPOS BIN
 const KW = new Set(KEYWORDS.map(s=>s.toUpperCase()));
 const FN = new Set(FUNCS.map(s=>s.toUpperCase()));
 const ALL = new Set([...KW,...FN]);
+// statement-starting commands = keywords minus the words that may legitimately follow ; or ,
+const NONSTMT = new Set(["THEN","ELSE","TO","STEP","USING","SWAP","AND","OR","NOT","XOR","MOD","ERL","FN","SPC","TAB"]);
+const STMT_KW = new Set([...KW].filter(k=>!NONSTMT.has(k)));
 
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
 
@@ -194,6 +197,18 @@ function checkLine(raw){
     // capital O directly adjacent to a digit, or a lone capital O between operators (often should be 0)
     if(/[0-9]O|O[0-9]/.test(body)) { msgs.push(["warn","Capital O next to a digit — did you mean zero 0?"]); if(level==="ok")level="warn"; }
     if(/(^|[^A-Za-z$%])l[0-9]/.test(body)) { msgs.push(["warn","Lower-case l next to a digit — did you mean one 1?"]); if(level==="ok")level="warn"; }
+  }
+  // ';' or ',' immediately before a statement keyword (or ?) almost always means ':' was intended
+  {
+    const code=stripStringsAndComments(body);
+    const m2=code.match(/([;,])\s*(\?|[A-Za-z][A-Za-z0-9]*\$?)/);
+    if(m2){
+      const word = m2[2]==="?" ? "?" : m2[2].toUpperCase();
+      if(m2[2]==="?" || STMT_KW.has(word)){
+        msgs.push(["err",`'${m2[1]}' before a new statement (${word}) — did you mean ':' ?  e.g. PRINT:PRINT`]);
+        level="err";
+      }
+    }
   }
   if(msgs.length===0) msgs.push(["ok","Looks fine."]);
   return {lineNo, html:t.html, msgs, level, words:t.words, body};
