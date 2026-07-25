@@ -21,7 +21,7 @@ An idea to convert the 6128 PLUS model's Centronics floppy connector to a more s
 ## [Dual ROM Adaptor for CPC464](/CPC464_Dual_ROM)
 An idea for a no-cut adaptor board to allow two 32KB ROM images to be installed/switchable on a 64KB EPROM.  This means you could have the original 464 firmware/BASIC 1.0 and 664 (or 6128) firmware/BASIC 1.1 easily switchable.  Alternatively you could install a diagnostic ROM in one of the 32KB banks.<br>
 
-Of course you would need to de-solder the original ROM and install this, but you wouldn't need to worry about cutting the PCB and wiring up pin 1, and you caught just reinstall the original ROM.<br>
+Of course you would need to de-solder the original ROM and install this, but you wouldn't need to worry about cutting the PCB and wiring up pin 1, and you can just reinstall the original ROM.<br>
 
 ![Dual ROM 3D](/CPC464_Dual_ROM/CPC464_Dual_ROM_3D.png)
 
